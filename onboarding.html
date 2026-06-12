@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexScholar Prototype - Onboarding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar fade-in">
+      <div class="brand">
+        <div class="brand-mark">NS</div>
+        <div class="brand-copy">
+          <strong>NexScholar</strong>
+          <span>Interactive onboarding prototype</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./matching.html">Matching</a>
+        <a href="./comparison.html">Compare</a>
+        <a class="active" href="./onboarding.html">Onboarding</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy fade-in delay-1">
+        <div class="eyebrow">US201 focused experience</div>
+        <h1>Guide new users with actions, not long instructions.</h1>
+        <p>
+          The live platform already shows signs of tutorial support, but the project charter correctly identified that first-time onboarding needs to be more interactive.
+          This page turns onboarding into a short role-aware journey that helps users get to value faster.
+        </p>
+        <div class="hero-actions">
+          <button class="button primary">Student journey</button>
+          <button class="button secondary">Lecturer journey</button>
+        </div>
+      </div>
+
+      <aside class="hero-panel fade-in delay-2">
+        <div>
+          <h2>Onboarding goal</h2>
+          <p class="muted-light">End the first-use flow with one useful next step, not a passive confirmation message.</p>
+        </div>
+        <div class="student-card">
+          <strong>Final prompt</strong>
+          <p class="muted-light" style="margin-top: 8px;">You are ready to compare your top 2 supervisor recommendations. This will take less than 3 minutes.</p>
+          <div class="tags" style="margin-top: 14px;">
+            <span class="tag">1 guided search</span>
+            <span class="tag">1 compare action</span>
+            <span class="tag">1 profile improvement</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="layout">
+      <main class="stack">
+        <section class="panel fade-in delay-2">
+          <div class="section-head">
+            <div>
+              <h2>Four-step student onboarding</h2>
+              <p>This structure replaces text-heavy instructions with a simple path: define goal, complete profile, try a guided example, then take one meaningful action.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="step">
+              <div class="step-index">1</div>
+              <div>
+                <strong>Select your goal</strong>
+                <p>Choose between finding a supervisor, screening opportunities, or building a research profile.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-index">2</div>
+              <div>
+                <strong>Complete key profile fields</strong>
+                <p>Highlight only the fields that improve matching accuracy instead of overwhelming users with the full account setup.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-index">3</div>
+              <div>
+                <strong>Run a guided example</strong>
+                <p>Show one sample search, one explanation panel, and one compare step to teach the platform through use.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-index">4</div>
+              <div>
+                <strong>Take the first next action</strong>
+                <p>The tutorial should end by moving the user into the real product flow, not by stopping at an information page.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Support cards around the journey</h2>
+              <p>Small support panels reduce uncertainty and tell the user why each step matters.</p>
+            </div>
+          </div>
+          <div class="cards-3">
+            <article class="feature-card" style="background: var(--soft-blue);">
+              <h3>Profile readiness</h3>
+              <p>Show a visible readiness score and tell the user which missing item matters most for stronger matching.</p>
+            </article>
+            <article class="feature-card" style="background: var(--soft-green);">
+              <h3>Guided example</h3>
+              <p>Walk through one realistic scenario based on the user's chosen field instead of generic help text.</p>
+            </article>
+            <article class="feature-card" style="background: var(--soft-gold);">
+              <h3>Confidence note</h3>
+              <p>Clarify what the system knows and what it is inferring so the user can trust the recommendations.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="aside-column">
+        <section class="aside-card fade-in delay-2">
+          <h3 style="font-size: 1.25rem;">Why this matters</h3>
+          <div class="list-stack" style="margin-top: 14px;">
+            <div class="rail-item">
+              <strong>Less friction</strong>
+              <p>New users see the shortest useful path instead of a wall of instructions.</p>
+            </div>
+            <div class="rail-item">
+              <strong>Better quality input</strong>
+              <p>Users are nudged to complete the profile fields that actually affect matching quality.</p>
+            </div>
+            <div class="rail-item">
+              <strong>Faster activation</strong>
+              <p>The first useful action happens during onboarding, not after it.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="aside-card fade-in delay-3">
+          <h3 style="font-size: 1.25rem;">Charter alignment</h3>
+          <div class="feed-list" style="margin-top: 14px;">
+            <div class="feed-item">
+              <strong>US201</strong>
+              <p>Guided interactive tutorial for new users.</p>
+            </div>
+            <div class="feed-item">
+              <strong>US202 direction</strong>
+              <p>Sets up a future clickable workflow examples page for Sprint #2.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
