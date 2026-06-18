@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
+<body data-page="matching">
   <div class="page-shell">
     <header class="topbar fade-in">
-      <div class="brand">
+      <a class="brand" href="./index.html">
         <div class="brand-mark">NS</div>
         <div class="brand-copy">
           <strong>NexScholar</strong>
-          <span>AI matching and recommendation prototype</span>
+          <span>Explainable matching and screening</span>
         </div>
-      </div>
+      </a>
       <nav class="nav">
         <a href="./index.html">Home</a>
         <a class="active" href="./matching.html">Matching</a>
@@ -29,28 +29,28 @@
 
     <section class="hero">
       <div class="hero-copy fade-in delay-1">
-        <div class="eyebrow">US101 + US102 in one focused view</div>
+        <div class="eyebrow">US101 + US102: transparent score breakdown plus role-based recommendation cards</div>
         <h1>Matching should explain itself.</h1>
         <p>
-          This page addresses the most important enhancement in the charter: users should not receive a black-box recommendation.
-          Instead, each result explains the score, the overlap, and what the user can do next.
+          Students can filter recommendations by research interests, and lecturers can screen candidates with clear research-fit indicators.
+          The same page supports both flows by changing the result language and action buttons.
         </p>
         <div class="hero-actions">
-          <button class="button primary">Student result mode</button>
-          <button class="button secondary">Lecturer screening mode</button>
+          <button class="button primary" data-mode="student">Student result mode</button>
+          <button class="button secondary" data-mode="lecturer">Lecturer screening mode</button>
         </div>
         <div class="stats-grid">
           <div class="stat">
             <strong>93%</strong>
-            <span>Research-fit confidence for the top supervisor recommendation.</span>
+            <span>Research fit for the top current recommendation.</span>
           </div>
           <div class="stat">
             <strong>88%</strong>
-            <span>Method overlap based on tools, keywords, and current project themes.</span>
+            <span>Method overlap using keywords, methods, and current projects.</span>
           </div>
           <div class="stat">
             <strong>76%</strong>
-            <span>Profile readiness shown to help users improve weak recommendation areas.</span>
+            <span>Action readiness tied to profile completeness and proposal quality.</span>
           </div>
         </div>
       </div>
@@ -58,38 +58,38 @@
       <aside class="hero-panel fade-in delay-2">
         <div>
           <h2>Recommendation anatomy</h2>
-          <p class="muted-light">A good result card should help the user trust the system and know the next step.</p>
+          <p class="muted-light">Every top result now shows score, factor breakdown, and a plain-language explanation.</p>
         </div>
-        <div class="student-card">
+        <div class="student-card" id="hero-recommendation">
           <div class="split-top">
             <div>
-              <strong>Assoc. Prof. Dr. Nur Aina Rahman</strong>
-              <p class="muted-light">UTM • Bioinformatics • Cancer systems modelling</p>
+              <strong id="hero-name">Assoc. Prof. Dr. Nur Aina Rahman</strong>
+              <p class="muted-light" id="hero-meta">UTM • Bioinformatics • Cancer systems modelling</p>
             </div>
             <div class="score-badge">
-              <strong>91</strong>
+              <strong id="hero-score">91</strong>
               <span>match</span>
             </div>
           </div>
-          <div class="meter" style="margin-top: 16px;">
+          <div class="meter">
             <div class="meter-row">
               <span>Research fit</span>
-              <div class="bar"><span style="width: 93%"></span></div>
-              <strong>93</strong>
+              <div class="bar"><span id="hero-fit-bar" style="width: 93%"></span></div>
+              <strong id="hero-fit">93</strong>
             </div>
             <div class="meter-row">
               <span>Method overlap</span>
-              <div class="bar"><span style="width: 88%"></span></div>
-              <strong>88</strong>
+              <div class="bar"><span id="hero-method-bar" style="width: 88%"></span></div>
+              <strong id="hero-method">88</strong>
             </div>
             <div class="meter-row">
               <span>Readiness</span>
-              <div class="bar"><span style="width: 76%"></span></div>
-              <strong>76</strong>
+              <div class="bar"><span id="hero-ready-bar" style="width: 76%"></span></div>
+              <strong id="hero-ready">76</strong>
             </div>
           </div>
-          <div class="explain">
-            Why this match: your proposal keywords overlap with 4 active themes, your technical methods align with the lab workflow, and your current profile is almost ready for first contact.
+          <div class="explain" id="hero-explain">
+            Why this match: your proposal keywords overlap with 4 active themes, your technical methods align with the lab workflow, and your profile is nearly ready for first contact.
           </div>
         </div>
       </aside>
@@ -100,97 +100,76 @@
         <section class="panel fade-in delay-2">
           <div class="section-head">
             <div>
-              <h2>Role-based result cards</h2>
-              <p>Students and lecturers care about different signals, so the interface should not force them to read the same generic result template.</p>
-            </div>
-            <div class="role-toggle">
-              <button class="active" data-role="student">Student view</button>
-              <button data-role="lecturer">Lecturer view</button>
+              <h2>Interactive research-interest filters</h2>
+              <p>Students can refine supervisor recommendations, while lecturers can re-rank candidates by research direction and readiness.</p>
             </div>
           </div>
-          <div class="cards-2">
-            <article class="match-card" data-audience="student">
-              <div class="match-header">
-                <div>
-                  <h3>Assoc. Prof. Dr. Nur Aina Rahman</h3>
-                  <p>Supervisor candidate • UTM • Systems bioinformatics</p>
-                </div>
-                <div class="score-chip"><strong>91</strong></div>
+
+          <div class="filter-shell">
+            <div class="filter-group">
+              <span class="filter-label">Role</span>
+              <div class="role-toggle">
+                <button class="active" data-role-toggle="student">Student</button>
+                <button data-role-toggle="lecturer">Lecturer</button>
               </div>
-              <div class="tags">
-                <span class="tag">Cancer data</span>
-                <span class="tag">RNA-seq</span>
-                <span class="tag">Python</span>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-label">Research interests</span>
+              <div class="chip-row" id="interest-filters">
+                <button class="mini-tab active" data-interest="all">All</button>
+                <button class="mini-tab" data-interest="bioinformatics">Bioinformatics</button>
+                <button class="mini-tab" data-interest="ai">AI</button>
+                <button class="mini-tab" data-interest="hci">HCI</button>
+                <button class="mini-tab" data-interest="health">Health data</button>
               </div>
-              <div class="explain">Best overall fit because the student's methods and topic align strongly with the supervisor's current research direction.</div>
-            </article>
-            <article class="match-card" data-audience="student">
-              <div class="match-header">
-                <div>
-                  <h3>Dr. Syafiq Mahzan</h3>
-                  <p>Supervisor candidate • UM • Medical imaging AI</p>
-                </div>
-                <div class="score-chip"><strong>84</strong></div>
+            </div>
+
+            <div class="filter-group">
+              <span class="filter-label">Readiness</span>
+              <div class="chip-row" id="readiness-filters">
+                <button class="mini-tab active" data-ready="all">All</button>
+                <button class="mini-tab" data-ready="contact">Contact-ready</button>
+                <button class="mini-tab" data-ready="improve">Needs improvement</button>
               </div>
-              <div class="tags">
-                <span class="tag">Deep learning</span>
-                <span class="tag">Imaging</span>
-                <span class="tag">PyTorch</span>
-              </div>
-              <div class="explain">Strong method match, but lower topic alignment. The system suggests refining the abstract before first contact.</div>
-            </article>
-            <article class="match-card" data-audience="lecturer" hidden>
-              <div class="match-header">
-                <div>
-                  <h3>Li Mei Chen</h3>
-                  <p>Candidate profile • MSc applicant • Computational biology</p>
-                </div>
-                <div class="score-chip"><strong>89</strong></div>
-              </div>
-              <div class="tags">
-                <span class="tag">CGPA 3.72</span>
-                <span class="tag">RNA-seq</span>
-                <span class="tag">Proposal draft</span>
-              </div>
-              <div class="explain">Recommended because the candidate has good method alignment, clear topic direction, and enough readiness for meaningful screening.</div>
-            </article>
-            <article class="match-card" data-audience="lecturer" hidden>
-              <div class="match-header">
-                <div>
-                  <h3>Ahmad Firdaus</h3>
-                  <p>Candidate profile • PhD prospect • Human-computer interaction</p>
-                </div>
-                <div class="score-chip"><strong>81</strong></div>
-              </div>
-              <div class="tags">
-                <span class="tag">UX studies</span>
-                <span class="tag">Mixed methods</span>
-                <span class="tag">Prototype testing</span>
-              </div>
-              <div class="explain">Good domain fit, but readiness is weaker. The lecturer view should recommend requesting a stronger plan before shortlisting.</div>
-            </article>
+            </div>
           </div>
         </section>
 
         <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
-              <h2>Improvement prompts built into matching</h2>
-              <p>Recommendation systems become more useful when they tell users how to improve the next result instead of only ranking the current one.</p>
+              <h2>Role-based matching cards</h2>
+              <p>Check two or more profiles and use the compare action to jump into the dedicated side-by-side decision page.</p>
+            </div>
+            <div class="actions-row">
+              <button class="button secondary" id="clear-selection">Clear selection</button>
+              <a class="button primary" id="compare-selected" href="./comparison.html">Compare selected</a>
+            </div>
+          </div>
+
+          <div class="cards-2" id="match-results"></div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Suggested next actions</h2>
+              <p>Engagement prompts are built into the matching flow so users know how to improve future recommendations.</p>
             </div>
           </div>
           <div class="cards-3">
             <article class="feature-card">
-              <h3>Add missing proposal abstract</h3>
-              <p>Raises confidence for topic-based matching and reduces weak recommendations.</p>
+              <h3>Complete missing proposal abstract</h3>
+              <p>Raises confidence for topic-based matching and can increase the top-fit score by around 7 points.</p>
             </article>
             <article class="feature-card">
-              <h3>Confirm preferred methods</h3>
-              <p>Improves method overlap calculation and helps the user understand why one supervisor ranks above another.</p>
+              <h3>Add one more research method</h3>
+              <p>Improves method overlap and helps explain why one recommendation ranks above another.</p>
             </article>
             <article class="feature-card">
-              <h3>See confidence breakdown</h3>
-              <p>Separates known facts from inferred fit, which is especially important for academic trust.</p>
+              <h3>Compare before outreach</h3>
+              <p>Prevents users from acting on the highest score alone when funding or readiness signals suggest another choice.</p>
             </article>
           </div>
         </section>
@@ -198,39 +177,40 @@
 
       <aside class="aside-column">
         <section class="aside-card fade-in delay-2">
-          <h3 style="font-size: 1.25rem;">Design rationale</h3>
+          <h3>Candidate card checklist</h3>
           <div class="list-stack" style="margin-top: 14px;">
             <div class="rail-item">
-              <strong>Clear score hierarchy</strong>
-              <p>One big score, then meaningful supporting factors.</p>
+              <strong>Matching score</strong>
+              <p>Displayed as the entry signal for quick scanning.</p>
             </div>
             <div class="rail-item">
-              <strong>Explanation block</strong>
-              <p>The system always answers "why this match?" in plain language.</p>
+              <strong>Research fit indicators</strong>
+              <p>Shows fit, methods, and readiness separately to avoid black-box ranking.</p>
             </div>
             <div class="rail-item">
-              <strong>Action after insight</strong>
-              <p>Each recommendation suggests a next step instead of ending at the score.</p>
+              <strong>Action buttons</strong>
+              <p>Cards include compare, save, and contact actions for a complete prototype loop.</p>
             </div>
           </div>
         </section>
 
         <section class="aside-card fade-in delay-3">
-          <h3 style="font-size: 1.25rem;">Charter alignment</h3>
+          <h3>Scenario goal</h3>
           <div class="feed-list" style="margin-top: 14px;">
             <div class="feed-item">
-              <strong>US101</strong>
-              <p>Lecturer candidate matching score and research fit indicators.</p>
+              <strong>Student flow</strong>
+              <p>Filter by interest, inspect fit reasons, compare supervisors, then send a targeted outreach.</p>
             </div>
             <div class="feed-item">
-              <strong>US102</strong>
-              <p>Student supervisor recommendations based on research interests.</p>
+              <strong>Lecturer flow</strong>
+              <p>Screen candidates by fit, proposal maturity, and funding readiness before shortlisting.</p>
             </div>
           </div>
         </section>
       </aside>
     </div>
   </div>
+
   <script src="./assets/app.js"></script>
 </body>
 </html>
