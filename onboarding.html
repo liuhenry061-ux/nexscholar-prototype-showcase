@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body data-page="onboarding">
+<body>
   <div class="page-shell">
     <header class="topbar fade-in">
-      <a class="brand" href="./index.html">
+      <div class="brand">
         <div class="brand-mark">NS</div>
         <div class="brand-copy">
           <strong>NexScholar</strong>
-          <span>4-step guided first-use journey</span>
+          <span>Interactive onboarding prototype</span>
         </div>
-      </a>
+      </div>
       <nav class="nav">
         <a href="./index.html">Home</a>
         <a href="./matching.html">Matching</a>
@@ -29,157 +29,172 @@
 
     <section class="hero">
       <div class="hero-copy fade-in delay-1">
-        <div class="eyebrow">US201 + US202: replace text-heavy guidance with a clickable 4-step flow</div>
-        <h1>Teach the platform through action.</h1>
+        <div class="eyebrow">US201 focused experience</div>
+        <h1>Guide new users with actions, not long instructions.</h1>
         <p>
-          New users should not need to decode a long instruction page.
-          This onboarding flow uses a guided overlay, clear progress markers, and a simulated scenario from search to recommendation to profile update.
+          The live platform already shows signs of tutorial support, but the project charter correctly identified that first-time onboarding needs to be more interactive.
+          This page turns onboarding into a short role-aware journey that helps users get to value faster.
         </p>
         <div class="hero-actions">
-          <button class="button primary" id="start-tour">Start 4-step guide</button>
-          <a class="button secondary" href="./matching.html">Skip to matching</a>
+          <button class="button primary">Student journey</button>
+          <button class="button secondary">Lecturer journey</button>
         </div>
       </div>
 
       <aside class="hero-panel fade-in delay-2">
         <div>
-          <h2>Guided example outcome</h2>
-          <p class="muted-light">The last step ends with a real next move instead of a passive success notice.</p>
+          <h2>Onboarding goal</h2>
+          <p class="muted-light">End the first-use flow with one useful next step, not a passive confirmation message.</p>
         </div>
         <div class="student-card">
           <strong>Final prompt</strong>
-          <p class="muted-light" style="margin-top: 8px;">You are ready to compare your top 2 supervisor recommendations. This should take less than 3 minutes.</p>
+          <p class="muted-light" style="margin-top: 8px;">You are ready to compare your top 2 supervisor recommendations. This will take less than 3 minutes.</p>
           <div class="tags" style="margin-top: 14px;">
             <span class="tag">1 guided search</span>
-            <span class="tag">1 recommendation view</span>
-            <span class="tag">1 profile update</span>
+            <span class="tag">1 compare action</span>
+            <span class="tag">1 profile improvement</span>
           </div>
         </div>
       </aside>
     </section>
 
-    <div class="layout onboarding-layout">
+    <section class="journey-strip fade-in delay-2">
+      <div class="journey-step">
+        <strong>Discover</strong>
+        <p>The user enters with a goal instead of a generic homepage tour.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Understand</strong>
+        <p>Matching logic becomes easier to follow when the user sees guided examples.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Decide</strong>
+        <p>The user learns how to move from recommendation to comparison.</p>
+      </div>
+      <div class="journey-step active">
+        <strong>Continue</strong>
+        <p>Onboarding ends with future-use value, not a dead-end completion state.</p>
+      </div>
+    </section>
+
+    <div class="layout">
       <main class="stack">
         <section class="panel fade-in delay-2">
           <div class="section-head">
             <div>
-              <h2>Four-step guided flow</h2>
-              <p>The tutorial follows the sprint requirement exactly and highlights what each step helps the user unlock.</p>
-            </div>
-            <div class="actions-row">
-              <button class="button secondary" id="restart-tour">Restart guide</button>
+              <h2>Four-step student onboarding</h2>
+              <p>This structure replaces text-heavy instructions with a simple path: define goal, complete profile, try a guided example, then take one meaningful action.</p>
             </div>
           </div>
-
-          <div class="step-flow" id="step-flow">
-            <article class="step-card active" data-step="1" id="tour-step-1">
+          <div class="feature-card">
+            <div class="step">
               <div class="step-index">1</div>
               <div>
-                <strong>Select goal</strong>
-                <p>Choose whether you want to find a supervisor, compare candidates, or match funding pathways.</p>
+                <strong>Select your goal</strong>
+                <p>Choose between finding a supervisor, screening opportunities, or building a research profile.</p>
               </div>
-            </article>
-            <article class="step-card" data-step="2" id="tour-step-2">
+            </div>
+            <div class="step">
               <div class="step-index">2</div>
               <div>
-                <strong>Complete basic profile</strong>
-                <p>Fill only the fields that improve matching quality: topic, methods, level, and current outputs.</p>
+                <strong>Complete key profile fields</strong>
+                <p>Highlight only the fields that improve matching accuracy instead of overwhelming users with the full account setup.</p>
               </div>
-            </article>
-            <article class="step-card" data-step="3" id="tour-step-3">
+            </div>
+            <div class="step">
               <div class="step-index">3</div>
               <div>
                 <strong>Run a guided example</strong>
-                <p>Walk through a realistic scenario: search, view recommended matches, and inspect one explanation panel.</p>
+                <p>Show one sample search, one explanation panel, and one compare step to teach the platform through use.</p>
               </div>
-            </article>
-            <article class="step-card" data-step="4" id="tour-step-4">
+            </div>
+            <div class="step">
               <div class="step-index">4</div>
               <div>
-                <strong>Take the final step</strong>
-                <p>Update one missing profile field or compare your shortlisted profiles right away.</p>
+                <strong>Take the first next action</strong>
+                <p>The tutorial should end by moving the user into the real product flow, not by stopping at an information page.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Support cards around the journey</h2>
+              <p>Small support panels reduce uncertainty and tell the user why each step matters.</p>
+            </div>
+          </div>
+          <div class="cards-3">
+            <article class="feature-card" style="background: var(--soft-blue);">
+              <h3>Profile readiness</h3>
+              <p>Show a visible readiness score and tell the user which missing item matters most for stronger matching.</p>
+            </article>
+            <article class="feature-card" style="background: var(--soft-green);">
+              <h3>Guided example</h3>
+              <p>Walk through one realistic scenario based on the user's chosen field instead of generic help text.</p>
+            </article>
+            <article class="feature-card" style="background: var(--soft-gold);">
+              <h3>Confidence note</h3>
+              <p>Clarify what the system knows and what it is inferring so the user can trust the recommendations.</p>
             </article>
           </div>
         </section>
 
-        <section class="panel fade-in delay-3" id="guide-demo">
+        <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
-              <h2>Clickable workflow scenario</h2>
-              <p>At least one realistic task flow is simulated end-to-end so new users can learn by doing.</p>
+              <h2>Sprint 3 return-use improvements</h2>
+              <p>The onboarding page now does more than help users begin. It also shows why they should come back later and what progress they can continue.</p>
             </div>
           </div>
-
-          <div class="workflow-shell">
-            <div class="workflow-column">
-              <h3>Simulated actions</h3>
-              <div class="step-list">
-                <button class="workflow-action active" data-demo="search">1. Simulate clicking search</button>
-                <button class="workflow-action" data-demo="recommend">2. Simulate viewing recommendations</button>
-                <button class="workflow-action" data-demo="update">3. Simulate updating profile</button>
-              </div>
-            </div>
-            <div class="workflow-column">
-              <h3>What the user sees</h3>
-              <div class="demo-panel" id="demo-panel">
-                <strong>Search example loaded</strong>
-                <p>The system starts with a goal-aware query for "Bioinformatics PhD supervisor in Malaysia".</p>
-              </div>
-            </div>
+          <div class="cards-2">
+            <article class="feature-card">
+              <h3>After onboarding</h3>
+              <p>Users should transition into a live platform state such as comparing recommendations, improving profile readiness, or saving a future opportunity.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Before the next visit</h3>
+              <p>The system should leave the user with a remembered next action, which supports the Sprint 3 goal of stronger ongoing engagement.</p>
+            </article>
           </div>
         </section>
       </main>
 
       <aside class="aside-column">
         <section class="aside-card fade-in delay-2">
-          <h3>Activation supports</h3>
+          <h3 style="font-size: 1.25rem;">Why this matters</h3>
           <div class="list-stack" style="margin-top: 14px;">
             <div class="rail-item">
-              <strong>Profile completion prompt</strong>
-              <p>Shows exactly which missing item affects matching the most.</p>
+              <strong>Less friction</strong>
+              <p>New users see the shortest useful path instead of a wall of instructions.</p>
             </div>
             <div class="rail-item">
-              <strong>Confidence note</strong>
-              <p>Explains what the system knows versus what it infers.</p>
+              <strong>Better quality input</strong>
+              <p>Users are nudged to complete the profile fields that actually affect matching quality.</p>
             </div>
             <div class="rail-item">
-              <strong>Final action</strong>
-              <p>Ends onboarding by moving users into a real matching or comparison task.</p>
+              <strong>Faster activation</strong>
+              <p>The first useful action happens during onboarding, not after it.</p>
             </div>
           </div>
         </section>
 
         <section class="aside-card fade-in delay-3">
-          <h3>Why this reduces friction</h3>
+          <h3 style="font-size: 1.25rem;">Charter alignment</h3>
           <div class="feed-list" style="margin-top: 14px;">
             <div class="feed-item">
-              <strong>Less reading</strong>
-              <p>Users follow a short sequence instead of parsing a static help page.</p>
+              <strong>US201</strong>
+              <p>Guided interactive tutorial for new users.</p>
             </div>
             <div class="feed-item">
-              <strong>Faster activation</strong>
-              <p>The first useful matching decision happens during onboarding, not after it.</p>
+              <strong>US202 direction</strong>
+              <p>Sets up a future clickable workflow examples page for Sprint #2.</p>
             </div>
           </div>
         </section>
       </aside>
     </div>
   </div>
-
-  <div class="tour-overlay" id="tour-overlay" hidden>
-    <div class="tour-backdrop"></div>
-    <div class="tour-bubble">
-      <div class="eyebrow" id="tour-label">Step 1 of 4</div>
-      <h3 id="tour-title">Select your academic goal</h3>
-      <p id="tour-copy">Start by choosing the outcome you want so the platform can tailor matching and recommendations.</p>
-      <div class="tour-controls">
-        <button class="button secondary" id="tour-skip">Skip</button>
-        <button class="button primary" id="tour-next">Next</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="./assets/app.js"></script>
 </body>
 </html>

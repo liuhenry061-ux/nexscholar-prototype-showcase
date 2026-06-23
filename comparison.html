@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body data-page="comparison">
+<body>
   <div class="page-shell">
     <header class="topbar fade-in">
-      <a class="brand" href="./index.html">
+      <div class="brand">
         <div class="brand-mark">NS</div>
         <div class="brand-copy">
           <strong>NexScholar</strong>
-          <span>Side-by-side academic comparison</span>
+          <span>Profile comparison prototype</span>
         </div>
-      </a>
+      </div>
       <nav class="nav">
         <a href="./index.html">Home</a>
         <a href="./matching.html">Matching</a>
@@ -29,33 +29,52 @@
 
     <section class="hero">
       <div class="hero-copy fade-in delay-1">
-        <div class="eyebrow">US103: compare two or more profiles in one dedicated decision screen</div>
-        <h1>Compare profiles without losing the plot.</h1>
+        <div class="eyebrow">US103 focused experience</div>
+        <h1>Comparison built for real academic choices.</h1>
         <p>
-          Once users select multiple profiles in matching, this page becomes the decision workspace.
-          The layout focuses on the fields that matter most for academic choice: current project, subject, funding availability, and action readiness.
+          Instead of forcing users to open multiple profile pages and remember details manually, this screen places the most useful decision signals in one view.
+          Students can compare supervisors, while lecturers can compare shortlisted candidates with the same structure.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="./matching.html">Back to matching</a>
-          <button class="button secondary" id="swap-compare-mode">Switch compare scenario</button>
+          <button class="button primary">Compare supervisors</button>
+          <button class="button secondary">Compare candidates</button>
         </div>
       </div>
 
       <aside class="hero-panel fade-in delay-2">
         <div>
-          <h2>Decision recommendation</h2>
-          <p class="muted-light">The strongest score is useful, but the final recommendation should also surface tradeoffs and readiness.</p>
+          <h2>Decision support summary</h2>
+          <p class="muted-light">The strongest match is not always the right final choice. The interface should help the user judge tradeoffs.</p>
         </div>
         <div class="student-card">
-          <strong id="comparison-recommendation-title">Recommended first action</strong>
-          <p class="muted-light" id="comparison-recommendation-copy" style="margin-top: 8px;">Select at least two profiles in matching to activate a tailored recommendation here.</p>
-          <div class="tags" id="comparison-recommendation-tags" style="margin-top: 14px;">
-            <span class="tag">Research fit</span>
-            <span class="tag">Funding</span>
-            <span class="tag">Readiness</span>
+          <strong>Recommended decision</strong>
+          <p class="muted-light" style="margin-top: 8px;">Choose Assoc. Prof. Dr. Nur Aina Rahman first because topic fit and current project overlap are both stronger.</p>
+          <div class="tags" style="margin-top: 14px;">
+            <span class="tag">Higher research fit</span>
+            <span class="tag">Better topic overlap</span>
+            <span class="tag">Contact-ready</span>
           </div>
         </div>
       </aside>
+    </section>
+
+    <section class="journey-strip fade-in delay-2">
+      <div class="journey-step">
+        <strong>Discover</strong>
+        <p>The user enters the platform through a goal-based recommendation path.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Understand</strong>
+        <p>Matching clarifies why each option appears in the shortlist.</p>
+      </div>
+      <div class="journey-step active">
+        <strong>Decide</strong>
+        <p>Comparison compresses the decision into one scan-friendly layout.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Continue</strong>
+        <p>The decision should lead to a concrete next action instead of stopping here.</p>
+      </div>
     </section>
 
     <div class="layout">
@@ -63,69 +82,117 @@
         <section class="panel fade-in delay-2">
           <div class="section-head">
             <div>
-              <h2>Selected profiles</h2>
-              <p>The dedicated comparison board appears after checking multiple profiles in the matching page and clicking compare.</p>
+              <h2>Supervisor comparison</h2>
+              <p>This version compares academic fit, methods, project overlap, and action readiness in a way that is easier to scan than separate full profiles.</p>
             </div>
           </div>
-          <div class="comparison-grid" id="comparison-grid"></div>
+          <div class="cards-2">
+            <article class="feature-card">
+              <h3>Assoc. Prof. Dr. Nur Aina Rahman</h3>
+              <p>UTM • Systems bioinformatics • Cancer modelling</p>
+              <div class="compare-list" style="margin-top: 16px;">
+                <div class="compare-row"><span>Research fit</span><strong>93%</strong></div>
+                <div class="compare-row"><span>Current project overlap</span><strong>High</strong></div>
+                <div class="compare-row"><span>Method match</span><strong>Python, RNA-seq</strong></div>
+                <div class="compare-row"><span>Funding visibility</span><strong>2 open tracks</strong></div>
+                <div class="compare-row"><span>Action readiness</span><strong>Recommended now</strong></div>
+              </div>
+            </article>
+            <article class="feature-card">
+              <h3>Dr. Syafiq Mahzan</h3>
+              <p>UM • Medical imaging AI • Clinical vision research</p>
+              <div class="compare-list" style="margin-top: 16px;">
+                <div class="compare-row"><span>Research fit</span><strong>84%</strong></div>
+                <div class="compare-row"><span>Current project overlap</span><strong>Medium</strong></div>
+                <div class="compare-row"><span>Method match</span><strong>PyTorch, CV</strong></div>
+                <div class="compare-row"><span>Funding visibility</span><strong>1 open track</strong></div>
+                <div class="compare-row"><span>Action readiness</span><strong>Improve abstract first</strong></div>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
-              <h2>Core comparison attributes</h2>
-              <p>The table below follows the sprint requirement for key academic choice signals.</p>
+              <h2>What makes this better than separate profiles</h2>
+              <p>Users do not want to mentally stitch together multiple pages. This screen compresses the decision into one comparison ladder.</p>
             </div>
           </div>
-          <div class="table-shell">
-            <table class="compare-table" id="compare-table">
-              <thead></thead>
-              <tbody></tbody>
-            </table>
+          <div class="cards-3">
+            <article class="feature-card">
+              <h3>Field-by-field clarity</h3>
+              <p>Each row highlights one decision factor, making tradeoffs visible immediately.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Decision recommendation</h3>
+              <p>The system explains which option is stronger now and what would change the recommendation later.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Less switching cost</h3>
+              <p>Users spend less time opening tabs and more time making an informed next move.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Decision to next-step continuity</h2>
+              <p>Sprint 3 improves what happens after comparison: users should leave this page knowing exactly what to do next.</p>
+            </div>
+          </div>
+          <div class="mini-metrics">
+            <div class="mini-metric">
+              <strong>Compare</strong>
+              <span class="caption">Validate tradeoffs across fit, method, and readiness.</span>
+            </div>
+            <div class="mini-metric">
+              <strong>Choose</strong>
+              <span class="caption">See which option is strongest now and why.</span>
+            </div>
+            <div class="mini-metric">
+              <strong>Act</strong>
+              <span class="caption">Move into contact, shortlist, or profile refinement.</span>
+            </div>
+          </div>
+          <div class="journey-card" style="margin-top: 16px;">
+            <h3>Recommended follow-up</h3>
+            <p>After making a comparison decision, the user should either continue to first contact preparation, revise profile content to improve weaker options, or save the stronger path into a return-visit plan. This stronger post-comparison guidance is one of the main Sprint 3 improvements.</p>
           </div>
         </section>
       </main>
 
       <aside class="aside-column">
         <section class="aside-card fade-in delay-2">
-          <h3>Required fields</h3>
+          <h3 style="font-size: 1.25rem;">Lecturer variant</h3>
           <div class="timeline" style="margin-top: 14px;">
             <div class="timeline-item">
-              <strong>Current research / project</strong>
-              <p>Shows immediate project alignment.</p>
+              <strong>Candidate A</strong>
+              <p>Higher readiness and stronger topic fit.</p>
             </div>
             <div class="timeline-item">
-              <strong>Current project subject</strong>
-              <p>Clarifies disciplinary fit at a glance.</p>
+              <strong>Candidate B</strong>
+              <p>Good topic direction but weaker proposal maturity.</p>
             </div>
             <div class="timeline-item">
-              <strong>Funding availability</strong>
-              <p>Prevents attractive but impractical matches.</p>
-            </div>
-            <div class="timeline-item">
-              <strong>Action readiness</strong>
-              <p>Guides what the user should do next now.</p>
+              <strong>Outcome</strong>
+              <p>Shortlist A now, request more detail from B.</p>
             </div>
           </div>
         </section>
 
         <section class="aside-card fade-in delay-3">
-          <h3>Prototype logic</h3>
+          <h3 style="font-size: 1.25rem;">Charter alignment</h3>
           <div class="feed-list" style="margin-top: 14px;">
             <div class="feed-item">
-              <strong>From matching</strong>
-              <p>User selects two or more cards, then clicks compare.</p>
-            </div>
-            <div class="feed-item">
-              <strong>To comparison</strong>
-              <p>Selected cards are carried into this side-by-side decision screen.</p>
+              <strong>US103</strong>
+              <p>Clearer profile comparison layout for better matching decisions.</p>
             </div>
           </div>
         </section>
       </aside>
     </div>
   </div>
-
-  <script src="./assets/app.js"></script>
 </body>
 </html>

@@ -9,16 +9,16 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body data-page="home">
+<body>
   <div class="page-shell">
     <header class="topbar fade-in">
-      <a class="brand" href="./index.html">
+      <div class="brand">
         <div class="brand-mark">NS</div>
         <div class="brand-copy">
           <strong>NexScholar</strong>
-          <span>Explainable academic matching and decision support</span>
+          <span>Enhanced prototype for guided academic matching</span>
         </div>
-      </a>
+      </div>
       <nav class="nav">
         <a class="active" href="./index.html">Home</a>
         <a href="./matching.html">Matching</a>
@@ -29,62 +29,80 @@
 
     <section class="hero">
       <div class="hero-copy fade-in delay-1">
-        <div class="eyebrow">Reframed from content browsing into explainable academic decisions</div>
-        <h1>Turn research discovery into an explainable match.</h1>
+        <div class="eyebrow">Built from the project charter: matching clarity + profile comparison + guided onboarding</div>
+        <h1>Turn research discovery into an explainable decision.</h1>
         <p>
-          This prototype keeps NexScholar's role as an academic opportunities platform, then adds the missing layer:
-          transparent matching, side-by-side comparison, and guided next steps for both students and lecturers.
+          This enhanced concept keeps NexScholar's current strength as an academic opportunities platform, but makes the product feel more useful for actual matching.
+          Students can understand why a supervisor is recommended, lecturers can compare candidates faster, and new users can learn the flow without reading long instructions.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="./matching.html">Open matching flow</a>
-          <a class="button secondary" href="./comparison.html">See comparison view</a>
-          <a class="button secondary" href="./onboarding.html">Start guided onboarding</a>
+          <a class="button primary" href="./matching.html">See match flow</a>
+          <a class="button secondary" href="./comparison.html">Open compare view</a>
+          <a class="button secondary" href="./onboarding.html">Try onboarding</a>
         </div>
         <div class="stats-grid">
           <div class="stat">
             <strong>91</strong>
-            <span>Top recommendation shows an explainable score instead of a black-box ranking.</span>
+            <span>Top recommendation now shows a transparent fit score with reasons and confidence cues.</span>
           </div>
           <div class="stat">
             <strong>2-click</strong>
-            <span>Users can select profiles and jump to a comparison board with the right decision fields.</span>
+            <span>Side-by-side comparison supports supervisor selection and lecturer candidate screening.</span>
           </div>
           <div class="stat">
             <strong>4-step</strong>
-            <span>Onboarding walks users from goal selection to a real final action.</span>
+            <span>Role-aware onboarding replaces text-heavy instructions with guided actions.</span>
           </div>
         </div>
       </div>
 
       <aside class="hero-panel fade-in delay-2">
         <div>
-          <h2>Suggested next actions</h2>
-          <p class="muted-light">US301 and US302 are surfaced as a clear activation area instead of scattered reminders.</p>
+          <h2>Live platform, stronger framing</h2>
+          <p class="muted-light">The current website already contains opportunities, events, grants, and scholarships. This redesign connects that feed to matching decisions instead of leaving it as a separate stream.</p>
         </div>
         <div class="student-card">
           <div class="split-top">
             <div>
               <strong>Student dashboard snapshot</strong>
-              <p class="muted-light">Goal: Find a PhD supervisor in bioinformatics</p>
+              <p class="muted-light">Goal selected: Find supervisor for bioinformatics research</p>
             </div>
             <div class="score-badge">
               <strong>74%</strong>
               <span>profile ready</span>
             </div>
           </div>
-          <div class="progress-shell">
-            <div class="progress-track">
-              <span style="width: 74%"></span>
-            </div>
-            <div class="progress-caption">Add publications and methods to improve matching accuracy by up to 20%.</div>
+          <div class="tags" style="margin: 14px 0 16px;">
+            <span class="tag">1 proposal draft missing</span>
+            <span class="tag">2 shortlisted supervisors</span>
+            <span class="tag">1 scholarship fit</span>
           </div>
           <div class="check-grid">
-            <div class="check"><div><strong>Complete research outcomes</strong><div class="caption">Boosts research-fit confidence for AI matching.</div></div></div>
-            <div class="check"><div><strong>Compare top 2 supervisors</strong><div class="caption">Recommended before contacting your first supervisor.</div></div></div>
-            <div class="check"><div><strong>Save 1 matching scholarship</strong><div class="caption">Links funding readiness to profile progress.</div></div></div>
+            <div class="check"><div><strong>Complete methods section</strong><div class="caption">Improves explanation quality for AI matching.</div></div></div>
+            <div class="check"><div><strong>Compare top 2 supervisors</strong><div class="caption">Recommended before sending first connection request.</div></div></div>
+            <div class="check"><div><strong>Save MIS scholarship</strong><div class="caption">Deadline and eligibility can be tied to profile status.</div></div></div>
           </div>
         </div>
       </aside>
+    </section>
+
+    <section class="journey-strip fade-in delay-2">
+      <div class="journey-step active">
+        <strong>1. Discover</strong>
+        <p>The home page frames the user goal and directs them into the right flow.</p>
+      </div>
+      <div class="journey-step">
+        <strong>2. Understand</strong>
+        <p>Matching results explain why a recommendation is strong or weak.</p>
+      </div>
+      <div class="journey-step">
+        <strong>3. Decide</strong>
+        <p>Comparison tools help users evaluate alternatives side by side.</p>
+      </div>
+      <div class="journey-step">
+        <strong>4. Continue</strong>
+        <p>Onboarding and next actions encourage return visits and useful progress.</p>
+      </div>
     </section>
 
     <div class="layout">
@@ -92,30 +110,38 @@
         <section class="panel fade-in delay-2">
           <div class="section-head">
             <div>
-              <h2>Four core prototype pages</h2>
-              <p>The sprint brief calls for four linked pages. This home screen now acts as a clear entry layer that explains what each page helps the user decide.</p>
+              <h2>The four enhancement pillars</h2>
+              <p>The project charter asked for better AI matching presentation, profile comparison, onboarding, and engagement. This home page acts as a stitched overview of those four prototype areas.</p>
             </div>
           </div>
           <div class="tiles-2">
             <article class="tile">
-              <h3>Home</h3>
-              <p>Repositions NexScholar as a platform that converts research discovery into explainable matching decisions.</p>
-              <div class="actions-row"><a class="pill" href="./index.html">Current page</a></div>
+              <h3>Explainable matching</h3>
+              <p>Move from generic recommendation lists to score cards that explain research fit, method overlap, and readiness level.</p>
+              <div class="actions-row" style="margin-top: 14px;">
+                <a class="pill" href="./matching.html">Open matching page</a>
+              </div>
             </article>
             <article class="tile">
-              <h3>Matching</h3>
-              <p>Shows transparent score breakdowns, role-based cards, and interactive research-interest filters.</p>
-              <div class="actions-row"><a class="pill" href="./matching.html">Open matching</a></div>
+              <h3>Decision support comparison</h3>
+              <p>Give students and lecturers a focused side-by-side view instead of making them jump between disconnected profiles.</p>
+              <div class="actions-row" style="margin-top: 14px;">
+                <a class="pill" href="./comparison.html">Open comparison page</a>
+              </div>
             </article>
             <article class="tile">
-              <h3>Comparison</h3>
-              <p>Supports quick academic choices with side-by-side fields for projects, subjects, funding, and action readiness.</p>
-              <div class="actions-row"><a class="pill" href="./comparison.html">Open compare</a></div>
+              <h3>Guided onboarding</h3>
+              <p>Replace text-heavy first-use instructions with a short, clickable journey based on the user's goal and role.</p>
+              <div class="actions-row" style="margin-top: 14px;">
+                <a class="pill" href="./onboarding.html">Open onboarding page</a>
+              </div>
             </article>
             <article class="tile">
-              <h3>Onboarding</h3>
-              <p>Uses a 4-step guided flow and a clickable example journey to replace text-heavy instructions.</p>
-              <div class="actions-row"><a class="pill" href="./onboarding.html">Open onboarding</a></div>
+              <h3>Useful engagement prompts</h3>
+              <p>Make notifications feel academic and actionable: improve a profile, respond to a good match, or save a relevant opportunity.</p>
+              <div class="actions-row" style="margin-top: 14px;">
+                <span class="pill">Integrated across pages</span>
+              </div>
             </article>
           </div>
         </section>
@@ -123,71 +149,123 @@
         <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
-              <h2>What changed from the current site</h2>
-              <p>The live site already has research content, grants, events, and scholarships. This prototype keeps that ecosystem but reorganises it around decision support.</p>
+              <h2>Sprint 3 continuity improvements</h2>
+              <p>The major Sprint 3 enhancement is not a brand-new feature page. It is the way the existing pages now connect into one clearer user journey.</p>
+            </div>
+          </div>
+          <div class="journey-card">
+            <h3>From discovery to action</h3>
+            <p>The updated prototype now makes the transition between pages more deliberate. Instead of isolated screens, the user can understand what to do first, what to compare next, and what action should follow after the first recommendation.</p>
+            <div class="connector-list">
+              <div class="connector-item">
+                <div class="badge">1</div>
+                <p><strong>Home</strong> introduces the main product value and highlights the active path for the user.</p>
+              </div>
+              <div class="connector-item">
+                <div class="badge">2</div>
+                <p><strong>Matching</strong> explains recommendation quality and points the user toward a comparison decision.</p>
+              </div>
+              <div class="connector-item">
+                <div class="badge">3</div>
+                <p><strong>Comparison</strong> shows tradeoffs clearly and prepares the user for the next action.</p>
+              </div>
+              <div class="connector-item">
+                <div class="badge">4</div>
+                <p><strong>Onboarding</strong> reinforces how first-time users move into repeated platform use.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>What changed from the current website</h2>
+              <p>The live NexScholar site is already a content-rich platform. The enhancement does not throw that away. It reorganises the experience around decision support.</p>
             </div>
           </div>
           <div class="cards-3">
             <article class="feature-card">
               <h3>Before</h3>
-              <p>Users could browse opportunities, but the path from discovery to a confident supervisor or candidate decision was unclear.</p>
+              <p>Users see opportunities and content, but it is less obvious how to move from discovery into supervisor or candidate decisions.</p>
             </article>
             <article class="feature-card">
               <h3>After</h3>
-              <p>Users choose a goal early, then matching, comparison, and onboarding adapt around that goal.</p>
+              <p>Users choose a goal early and the system shapes recommendations, onboarding, and next actions around that goal.</p>
             </article>
             <article class="feature-card">
               <h3>Result</h3>
-              <p>More clarity, faster shortlisting, and better return triggers through activity indicators and profile completion prompts.</p>
+              <p>More confidence for first-time users, more clarity for matching, and stronger reasons to return to the platform.</p>
             </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Return-visit value</h2>
+              <p>Sprint 3 also strengthens why users would come back to NexScholar after the first session.</p>
+            </div>
+          </div>
+          <div class="action-flow">
+            <div class="action-box">
+              <strong>Suggested next action</strong>
+              <p>Users are told what to do after the first match instead of being left at a static result page.</p>
+            </div>
+            <div class="action-box">
+              <strong>Ongoing profile improvement</strong>
+              <p>The platform shows how small changes in profile completeness improve recommendation quality.</p>
+            </div>
+            <div class="action-box">
+              <strong>Opportunity follow-through</strong>
+              <p>Relevant scholarships, events, or supervisor paths can be linked to the current user goal.</p>
+            </div>
           </div>
         </section>
       </main>
 
       <aside class="aside-column">
         <section class="aside-card fade-in delay-2">
-          <h3>Activity indicators</h3>
-          <div class="feed-list" style="margin-top: 14px;">
-            <div class="feed-item">
-              <strong>2 recommendations improved</strong>
-              <p>After adding publications, your top-fit confidence increased from 84 to 91.</p>
+          <h3 style="font-size: 1.25rem;">Prototype route map</h3>
+          <div class="timeline" style="margin-top: 14px;">
+            <div class="timeline-item">
+              <strong>Home</strong>
+              <p>Overview of the new value proposition and major entry points.</p>
             </div>
-            <div class="feed-item">
-              <strong>1 funding fit saved</strong>
-              <p>MIS scholarship eligibility now matches your shortlisted university pathway.</p>
+            <div class="timeline-item">
+              <strong>Matching</strong>
+              <p>Role-based result cards for students and lecturers.</p>
             </div>
-            <div class="feed-item">
-              <strong>1 lecturer replied</strong>
-              <p>Clearer matching reasons make first outreach more context-aware.</p>
+            <div class="timeline-item">
+              <strong>Compare</strong>
+              <p>Side-by-side decision support view.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Onboarding</strong>
+              <p>Step-by-step guided workflow and first-use prompts.</p>
             </div>
           </div>
         </section>
 
         <section class="aside-card fade-in delay-3">
-          <h3>Prototype route map</h3>
-          <div class="timeline" style="margin-top: 14px;">
-            <div class="timeline-item">
-              <strong>1. Home</strong>
-              <p>Entry point and product reframing.</p>
+          <h3 style="font-size: 1.25rem;">Evidence notes for report</h3>
+          <div class="feed-list" style="margin-top: 14px;">
+            <div class="feed-item">
+              <strong>Hi-fidelity proof</strong>
+              <p>Each page has a clear visual treatment, purposeful content, and can be screenshotted directly for Sprint Review.</p>
             </div>
-            <div class="timeline-item">
-              <strong>2. Matching</strong>
-              <p>Transparent scoring and role-aware results.</p>
-            </div>
-            <div class="timeline-item">
-              <strong>3. Compare</strong>
-              <p>Side-by-side choice support.</p>
-            </div>
-            <div class="timeline-item">
-              <strong>4. Onboarding</strong>
-              <p>Guided flow plus simulated scenario.</p>
+            <div class="feed-item">
+              <strong>Backlog alignment</strong>
+              <p>Pages map directly to US101, US102, US103, and US201 from the project charter.</p>
             </div>
           </div>
         </section>
       </aside>
     </div>
-  </div>
 
-  <script src="./assets/app.js"></script>
+    <p class="footer-note fade-in delay-3">
+      This prototype is designed as a high-fidelity concept that now reflects Sprint 1 direction-setting, Sprint 2 refinement, and Sprint 3 integration and continuity improvements.
+    </p>
+  </div>
 </body>
 </html>
