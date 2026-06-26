@@ -30,6 +30,8 @@
 
     <section class="product-hero">
       <div class="signin-shell fade-in delay-1">
+        <div class="floating-orb orb-a"></div>
+        <div class="floating-orb orb-b"></div>
         <div class="eyebrow">Account continuity built into the real user journey</div>
         <h1>Sign in to keep your academic journey moving.</h1>
         <p>
@@ -61,7 +63,7 @@
             </div>
           </div>
           <div class="form-actions">
-            <button class="button primary" type="button">Open dashboard</button>
+            <button class="button primary" type="button" data-login-submit>Open dashboard</button>
             <button class="button secondary" type="button">Forgot password</button>
           </div>
           <p class="signin-note">After login, the platform should reopen saved searches, shortlists, profile reminders, and pending academic actions.</p>
@@ -95,7 +97,7 @@
             </div>
           </div>
           <div class="form-actions">
-            <button class="button primary" type="button">Create account</button>
+            <button class="button primary" type="button" data-register-submit>Create account</button>
             <button class="button secondary" type="button">Use institutional login</button>
           </div>
           <p class="signin-note">Registration should connect directly into role-aware onboarding so users reach value quickly after account creation.</p>
@@ -106,6 +108,11 @@
         <div>
           <h2>What login unlocks</h2>
           <p class="muted-light">A real academic platform should remember progress and make return visits useful.</p>
+        </div>
+
+        <div class="live-pill">
+          <span class="pulse-dot"></span>
+          Account state syncing in real time
         </div>
 
         <div class="dashboard-panel">

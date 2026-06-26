@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexScholar Prototype - Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="page-shell" data-dashboard-root>
+    <header class="topbar fade-in">
+      <div class="brand">
+        <div class="brand-mark">NS</div>
+        <div class="brand-copy">
+          <strong>NexScholar</strong>
+          <span>Personal academic dashboard</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./matching.html">Matching</a>
+        <a href="./comparison.html">Compare</a>
+        <a href="./onboarding.html">Onboarding</a>
+        <a class="active" href="./dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+
+    <section class="product-hero">
+      <div class="search-shell fade-in delay-1">
+        <div class="floating-orb orb-a"></div>
+        <div class="floating-orb orb-b"></div>
+        <div class="eyebrow">Logged in successfully and continuing saved progress</div>
+        <h1>Welcome back, <span data-user-name>User</span>.</h1>
+        <p>
+          This dashboard shows that the prototype can now carry account state across pages. Saved recommendations, readiness progress, and next-step reminders stay available after login.
+        </p>
+
+        <div class="user-chip">
+          <strong data-user-role>Student researcher</strong>
+          <span>/</span>
+          <span data-user-email>name@university.edu</span>
+        </div>
+
+        <div class="hero-metrics" style="margin-top: 20px;">
+          <div class="hero-metric">
+            <strong data-count="2">0</strong>
+            <p class="caption">Saved supervisor or candidate shortlists.</p>
+          </div>
+          <div class="hero-metric">
+            <strong data-count="1">0</strong>
+            <p class="caption">Tracked scholarship or grant opportunities.</p>
+          </div>
+          <div class="hero-metric">
+            <strong data-user-readiness>0%</strong>
+            <p class="caption">Current profile readiness for stronger matching.</p>
+          </div>
+        </div>
+
+        <div class="progress-line">
+          <span data-progress-width></span>
+        </div>
+
+        <div class="account-actions">
+          <a class="button primary" href="./matching.html">Continue matching</a>
+          <a class="button secondary" href="./comparison.html">Open comparison board</a>
+          <button class="button secondary" type="button" data-logout>Log out</button>
+        </div>
+      </div>
+
+      <aside class="platform-panel fade-in delay-2">
+        <div>
+          <h2>Account state in motion</h2>
+          <p class="muted-light">This is the part that makes the prototype feel truly alive: the system remembers who the user is and what should happen next.</p>
+        </div>
+
+        <div class="live-pill">
+          <span class="pulse-dot"></span>
+          Session active and dashboard synced
+        </div>
+
+        <div class="dashboard-panel">
+          <strong>Current goal</strong>
+          <p class="muted-light" style="margin-top: 8px;" data-user-goal>Find a supervisor</p>
+        </div>
+
+        <div class="dashboard-panel">
+          <strong>Live academic activity</strong>
+          <div class="ticker" style="margin-top: 12px;">
+            <div class="ticker-row">
+              <strong>Shortlist</strong>
+              <span>Top recommendation score updated after profile edit</span>
+              <small>Now</small>
+            </div>
+            <div class="ticker-row">
+              <strong>Funding</strong>
+              <span>Saved scholarship reminder expires in 4 days</span>
+              <small>4d</small>
+            </div>
+            <div class="ticker-row">
+              <strong>Next step</strong>
+              <span>Compare your top two paths before first contact</span>
+              <small>Ready</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="dashboard-layout">
+      <main class="stack">
+        <section class="dashboard-shell fade-in delay-2">
+          <div class="section-head">
+            <div>
+              <h2>Saved progress</h2>
+              <p>The dashboard is where discovery, matching, comparison, and return-use finally connect into one believable product state.</p>
+            </div>
+          </div>
+          <div class="dashboard-grid">
+            <article class="dashboard-widget">
+              <h3>Top supervisor path</h3>
+              <div class="metric-value">91</div>
+              <p class="caption">Assoc. Prof. Dr. Nur Aina Rahman remains the strongest current recommendation.</p>
+            </article>
+            <article class="dashboard-widget">
+              <h3>Funding alignment</h3>
+              <div class="metric-value">1</div>
+              <p class="caption">Malaysia International Scholarship remains saved and relevant to your current goal.</p>
+            </article>
+            <article class="dashboard-widget">
+              <h3>Comparison pending</h3>
+              <div class="metric-value">2</div>
+              <p class="caption">Two shortlisted academic paths still need a final side-by-side decision.</p>
+            </article>
+            <article class="dashboard-widget">
+              <h3>Profile readiness</h3>
+              <div class="metric-value" data-user-readiness>0%</div>
+              <p class="caption">Completing methods and abstract details should improve confidence in the next recommendation cycle.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="dashboard-shell fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Recommended next actions</h2>
+              <p>These actions are intentionally specific so the teacher can see that the prototype is no longer static.</p>
+            </div>
+          </div>
+          <div class="status-list">
+            <article class="status-item">
+              <strong>Compare your top two supervisor recommendations</strong>
+              <p class="caption">Use the comparison board to validate fit, method overlap, and funding visibility before first contact.</p>
+            </article>
+            <article class="status-item">
+              <strong>Complete your methods section</strong>
+              <p class="caption">This should strengthen explainable matching and reduce weak-confidence recommendations.</p>
+            </article>
+            <article class="status-item">
+              <strong>Revisit saved scholarship opportunity</strong>
+              <p class="caption">Your tracked funding opportunity still matches your current postgraduate path.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="aside-column">
+        <section class="aside-card fade-in delay-3">
+          <h3 style="font-size: 1.25rem;">Why this matters</h3>
+          <div class="feed-list" style="margin-top: 14px;">
+            <div class="feed-item">
+              <strong>Real login result</strong>
+              <p>Users do not stop at the sign-in form. They arrive at a continuing dashboard state.</p>
+            </div>
+            <div class="feed-item">
+              <strong>More dynamic product feel</strong>
+              <p>Animated counters, live activity stream, and progress bars make the prototype feel active.</p>
+            </div>
+            <div class="feed-item">
+              <strong>Stronger Sprint 3 story</strong>
+              <p>The account layer now reinforces unified journey and return-visit value much more convincingly.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
