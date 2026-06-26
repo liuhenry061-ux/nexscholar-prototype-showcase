@@ -202,6 +202,17 @@ img {
   box-shadow: 0 14px 30px rgba(18, 58, 99, 0.18);
 }
 
+.nav a.nav-login {
+  background: var(--deep);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 14px 30px rgba(18, 58, 99, 0.18);
+}
+
+.nav a.nav-login:hover {
+  background: var(--deep-2);
+}
+
 .nav a {
   position: relative;
   overflow: hidden;
@@ -286,6 +297,17 @@ img {
   padding: 34px 34px 30px;
   position: relative;
   overflow: hidden;
+}
+
+.hero-copy[data-spotlight]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--spot-x, 24%) var(--spot-y, 16%), rgba(255, 255, 255, 0.68), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 42%);
+  opacity: 0.92;
+  pointer-events: none;
 }
 
 .hero-copy::after {
@@ -830,6 +852,22 @@ h1 {
 
 .status-card p,
 .status-card .caption {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.status-card .decision-step,
+.status-card .check-tile {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.status-card .decision-step strong,
+.status-card .check-tile strong {
+  color: white;
+}
+
+.status-card .decision-step .caption,
+.status-card .check-tile .caption {
   color: rgba(255, 255, 255, 0.76);
 }
 

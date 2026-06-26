@@ -9,8 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
+<body class="onboarding-page">
   <div class="page-shell">
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-a" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-b" aria-hidden="true"></div>
     <header class="topbar fade-in">
       <div class="brand">
         <div class="brand-mark">NS</div>
@@ -24,12 +27,12 @@
         <a href="./matching.html">Matching</a>
         <a href="./comparison.html">Compare</a>
         <a class="active" href="./onboarding.html">Onboarding</a>
-        <a href="./auth.html">Login</a>
+        <a class="nav-login" href="./auth.html">Login</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="hero-copy fade-in delay-1">
+      <div class="hero-copy fade-in delay-1" data-spotlight>
         <div class="eyebrow">US201 focused experience</div>
         <h1>Guide new users with actions, not long instructions.</h1>
         <p>
@@ -47,7 +50,7 @@
           <h2>Onboarding goal</h2>
           <p class="muted-light">End the first-use flow with one useful next step, not a passive confirmation message.</p>
         </div>
-        <div class="student-card">
+        <div class="student-card" data-tilt>
           <strong>Final prompt</strong>
           <p class="muted-light" style="margin-top: 8px;">You are ready to compare your top 2 supervisor recommendations. This will take less than 3 minutes.</p>
           <div class="tags" style="margin-top: 14px;">
@@ -59,22 +62,56 @@
       </aside>
     </section>
 
-    <section class="journey-strip fade-in delay-2">
-      <div class="journey-step">
-        <strong>Discover</strong>
-        <p>The user enters with a goal instead of a generic homepage tour.</p>
+    <section class="journey-marquee fade-in delay-2">
+      <div class="journey-intro">
+        <span class="journey-kicker">Onboarding flow</span>
+        <h2>First-use guidance now feels like a guided route, not a tutorial sheet.</h2>
+        <p>The onboarding page now carries new users from uncertainty to action with a more active, product-like rhythm that matches the homepage and decision pages.</p>
       </div>
-      <div class="journey-step">
-        <strong>Understand</strong>
-        <p>Matching logic becomes easier to follow when the user sees guided examples.</p>
-      </div>
-      <div class="journey-step">
-        <strong>Decide</strong>
-        <p>The user learns how to move from recommendation to comparison.</p>
-      </div>
-      <div class="journey-step active">
-        <strong>Continue</strong>
-        <p>Onboarding ends with future-use value, not a dead-end completion state.</p>
+
+      <div class="marquee-row">
+        <div class="marquee-track">
+          <article class="marquee-pill">
+            <span>Start</span>
+            <strong>Choose a goal</strong>
+            <p>Users enter the platform with an academic objective, not a generic account checklist.</p>
+          </article>
+          <article class="marquee-pill active">
+            <span>Guide</span>
+            <strong>Learn by doing</strong>
+            <p>The workflow teaches matching and comparison through a realistic example, not static instructions.</p>
+          </article>
+          <article class="marquee-pill">
+            <span>Ready</span>
+            <strong>Take one useful action</strong>
+            <p>The first session should end with a concrete next move instead of a passive completion message.</p>
+          </article>
+          <article class="marquee-pill">
+            <span>Return</span>
+            <strong>Come back with continuity</strong>
+            <p>Saved progress and account reminders make later visits feel purposeful and alive.</p>
+          </article>
+          <article class="marquee-pill" aria-hidden="true">
+            <span>Start</span>
+            <strong>Choose a goal</strong>
+            <p>Users enter the platform with an academic objective, not a generic account checklist.</p>
+          </article>
+          <article class="marquee-pill active" aria-hidden="true">
+            <span>Guide</span>
+            <strong>Learn by doing</strong>
+            <p>The workflow teaches matching and comparison through a realistic example, not static instructions.</p>
+          </article>
+          <article class="marquee-pill" aria-hidden="true">
+            <span>Ready</span>
+            <strong>Take one useful action</strong>
+            <p>The first session should end with a concrete next move instead of a passive completion message.</p>
+          </article>
+          <article class="marquee-pill" aria-hidden="true">
+            <span>Return</span>
+            <strong>Come back with continuity</strong>
+            <p>Saved progress and account reminders make later visits feel purposeful and alive.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -87,7 +124,7 @@
               <p>This structure replaces text-heavy instructions with a simple path: define goal, complete profile, try a guided example, then take one meaningful action.</p>
             </div>
           </div>
-          <div class="feature-card">
+          <div class="feature-card reveal-on-scroll" data-tilt>
             <div class="step">
               <div class="step-index">1</div>
               <div>
@@ -131,7 +168,7 @@
             <button data-target="return">Return visit</button>
           </div>
           <div class="state-board" style="margin-top: 16px;">
-            <article class="glass-card" data-panel="onboard-state" data-value="first">
+            <article class="glass-card reveal-on-scroll" data-panel="onboard-state" data-value="first" data-tilt>
               <h3>First-time user state</h3>
               <div class="signal-row">
                 <span>Primary need</span>
@@ -146,7 +183,7 @@
                 <strong><a class="inline-link" href="./matching.html">Open first recommendation flow</a></strong>
               </div>
             </article>
-            <article class="glass-card" data-panel="onboard-state" data-value="return" hidden>
+            <article class="glass-card reveal-on-scroll" data-panel="onboard-state" data-value="return" hidden data-tilt>
               <h3>Return-visit state</h3>
               <div class="signal-row">
                 <span>Primary need</span>
@@ -162,7 +199,7 @@
               </div>
             </article>
 
-            <article class="status-card">
+            <article class="status-card reveal-on-scroll" data-tilt>
               <h3>Engagement after onboarding</h3>
               <p>Onboarding should be the start of a relationship, not the end of a tutorial. The platform should remember what the user was doing and surface the most useful next task later.</p>
             </article>
@@ -177,15 +214,15 @@
             </div>
           </div>
           <div class="cards-3">
-            <article class="feature-card" style="background: var(--soft-blue);">
+            <article class="feature-card reveal-on-scroll" style="background: var(--soft-blue);" data-tilt>
               <h3>Profile readiness</h3>
               <p>Show a visible readiness score and tell the user which missing item matters most for stronger matching.</p>
             </article>
-            <article class="feature-card" style="background: var(--soft-green);">
+            <article class="feature-card reveal-on-scroll" style="background: var(--soft-green);" data-tilt>
               <h3>Guided example</h3>
               <p>Walk through one realistic scenario based on the user's chosen field instead of generic help text.</p>
             </article>
-            <article class="feature-card" style="background: var(--soft-gold);">
+            <article class="feature-card reveal-on-scroll" style="background: var(--soft-gold);" data-tilt>
               <h3>Confidence note</h3>
               <p>Clarify what the system knows and what it is inferring so the user can trust the recommendations.</p>
             </article>
@@ -200,11 +237,11 @@
             </div>
           </div>
           <div class="cards-2">
-            <article class="feature-card">
+            <article class="feature-card reveal-on-scroll" data-tilt>
               <h3>After onboarding</h3>
               <p>Users should transition into a live platform state such as comparing recommendations, improving profile readiness, or saving a future opportunity.</p>
             </article>
-            <article class="feature-card">
+            <article class="feature-card reveal-on-scroll" data-tilt>
               <h3>Before the next visit</h3>
               <p>The system should leave the user with a remembered next action, which supports the Sprint 3 goal of stronger ongoing engagement.</p>
             </article>
@@ -216,15 +253,15 @@
         <section class="aside-card fade-in delay-2">
           <h3 style="font-size: 1.25rem;">Why this matters</h3>
           <div class="list-stack" style="margin-top: 14px;">
-            <div class="rail-item">
+            <div class="rail-item reveal-on-scroll">
               <strong>Less friction</strong>
               <p>New users see the shortest useful path instead of a wall of instructions.</p>
             </div>
-            <div class="rail-item">
+            <div class="rail-item reveal-on-scroll">
               <strong>Better quality input</strong>
               <p>Users are nudged to complete the profile fields that actually affect matching quality.</p>
             </div>
-            <div class="rail-item">
+            <div class="rail-item reveal-on-scroll">
               <strong>Faster activation</strong>
               <p>The first useful action happens during onboarding, not after it.</p>
             </div>
@@ -234,11 +271,11 @@
         <section class="aside-card fade-in delay-3">
           <h3 style="font-size: 1.25rem;">Charter alignment</h3>
           <div class="feed-list" style="margin-top: 14px;">
-            <div class="feed-item">
+            <div class="feed-item reveal-on-scroll">
               <strong>US201</strong>
               <p>Guided interactive tutorial for new users.</p>
             </div>
-            <div class="feed-item">
+            <div class="feed-item reveal-on-scroll">
               <strong>US202 direction</strong>
               <p>Sets up a future clickable workflow examples page for Sprint #2.</p>
             </div>
