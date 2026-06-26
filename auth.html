@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexScholar Prototype - Login and Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar fade-in">
+      <div class="brand">
+        <div class="brand-mark">NS</div>
+        <div class="brand-copy">
+          <strong>NexScholar</strong>
+          <span>Account access prototype</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./matching.html">Matching</a>
+        <a href="./comparison.html">Compare</a>
+        <a href="./onboarding.html">Onboarding</a>
+        <a class="active" href="./auth.html">Login</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy auth-hero-copy fade-in delay-1">
+        <div class="eyebrow">Persistent account state for discovery, comparison, and return-use</div>
+        <h1>Log in when the journey becomes personal.</h1>
+        <p>
+          In the ideal NexScholar experience, authentication is not a detached admin screen. It appears exactly when users want to save a shortlist, continue profile setup, revisit a decision, or manage real academic actions over time.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="./matching.html">Back to match flow</a>
+          <a class="button secondary" href="./comparison.html">Back to compare flow</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel fade-in delay-2">
+        <div>
+          <h2>Why sign in matters</h2>
+          <p class="muted-light">Saved discoveries, realistic dashboards, and return-visit prompts all depend on account state.</p>
+        </div>
+        <div class="student-card">
+          <div class="auth-badge">Account state unlocked</div>
+          <div class="check-grid" style="margin-top: 16px;">
+            <div class="check"><div><strong>Saved shortlist</strong><div class="caption">Keep top supervisors or candidates across visits.</div></div></div>
+            <div class="check"><div><strong>Progress dashboard</strong><div class="caption">Track profile readiness and pending academic tasks.</div></div></div>
+            <div class="check"><div><strong>Smart reminders</strong><div class="caption">Return to the right next action instead of starting over.</div></div></div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="journey-strip fade-in delay-2">
+      <div class="journey-step">
+        <strong>Discover</strong>
+        <p>User finds relevant opportunities, supervisors, or candidates.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Understand</strong>
+        <p>Matching logic explains why one path is more suitable.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Decide</strong>
+        <p>Comparison compresses the tradeoff into one decision point.</p>
+      </div>
+      <div class="journey-step active">
+        <strong>Continue</strong>
+        <p>Login and registration preserve the journey for future return use.</p>
+      </div>
+    </section>
+
+    <div class="auth-layout">
+      <section class="auth-shell fade-in delay-2">
+        <div class="section-head">
+          <div>
+            <h2>Role-aware access</h2>
+            <p>The form adapts to whether the user wants to continue as a student researcher or lecturer evaluator.</p>
+          </div>
+        </div>
+
+        <div class="role-toggle" data-toggle-group data-scope="auth-mode">
+          <button class="active" data-target="login">Login</button>
+          <button data-target="register">Register</button>
+        </div>
+
+        <div class="auth-grid" style="margin-top: 16px;">
+          <article class="auth-option">
+            <strong>Student account</strong>
+            <p class="caption">Save supervisor comparisons, scholarships, and profile-readiness progress.</p>
+          </article>
+          <article class="auth-option">
+            <strong>Lecturer account</strong>
+            <p class="caption">Track shortlisted candidates, review notes, and screening follow-ups.</p>
+          </article>
+        </div>
+
+        <div class="form-card" data-panel="auth-mode" data-value="login" style="margin-top: 18px;">
+          <h3>Login to continue your NexScholar journey</h3>
+          <div class="form-stack">
+            <div class="field">
+              <label for="login-email">Email</label>
+              <input id="login-email" type="email" placeholder="student@nexscholar.com">
+            </div>
+            <div class="field">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" placeholder="Enter your password">
+            </div>
+            <div class="field">
+              <label for="login-role">Continue as</label>
+              <select id="login-role">
+                <option>Student researcher</option>
+                <option>Lecturer / supervisor</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="button">Open dashboard</button>
+            <button class="button secondary" type="button">Forgot password</button>
+          </div>
+          <p class="form-note">After login, the user should land on a role-specific dashboard with saved shortlist, readiness progress, and clear next actions.</p>
+        </div>
+
+        <div class="form-card" data-panel="auth-mode" data-value="register" hidden style="margin-top: 18px;">
+          <h3>Create a NexScholar account</h3>
+          <div class="form-stack">
+            <div class="field">
+              <label for="register-name">Full name</label>
+              <input id="register-name" type="text" placeholder="Your full name">
+            </div>
+            <div class="field">
+              <label for="register-email">Academic email</label>
+              <input id="register-email" type="email" placeholder="name@university.edu">
+            </div>
+            <div class="field">
+              <label for="register-role">Role</label>
+              <select id="register-role">
+                <option>Student researcher</option>
+                <option>Lecturer / supervisor</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="register-goal">Primary goal</label>
+              <select id="register-goal">
+                <option>Find a supervisor</option>
+                <option>Discover scholarships and grants</option>
+                <option>Screen research candidates</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="button">Create account</button>
+            <button class="button secondary" type="button">Use Google / institutional login</button>
+          </div>
+          <p class="form-note">Registration should immediately feed into role-aware onboarding so the user reaches a useful first action quickly.</p>
+        </div>
+      </section>
+
+      <aside class="aside-column">
+        <section class="aside-card fade-in delay-3">
+          <h3 style="font-size: 1.25rem;">What the account should remember</h3>
+          <div class="profile-checklist" style="margin-top: 14px;">
+            <div class="check-tile">
+              <strong>Saved decisions</strong>
+              <p class="caption">Top supervisors, shortlisted candidates, and saved opportunities.</p>
+            </div>
+            <div class="check-tile">
+              <strong>Open tasks</strong>
+              <p class="caption">Profile gaps, pending comparison, and next recommended action.</p>
+            </div>
+            <div class="check-tile">
+              <strong>Realistic state</strong>
+              <p class="caption">Recent results, updated readiness, and return-visit alerts.</p>
+            </div>
+            <div class="check-tile">
+              <strong>Lifecycle continuity</strong>
+              <p class="caption">The user resumes from where they left off, not from zero.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="aside-card fade-in delay-3">
+          <h3 style="font-size: 1.25rem;">Reference alignment</h3>
+          <div class="feed-list" style="margin-top: 14px;">
+            <div class="feed-item">
+              <strong>Closer to nexscholar.com</strong>
+              <p>Moves the prototype nearer to a real platform structure with account continuity, not just showcase screens.</p>
+            </div>
+            <div class="feed-item">
+              <strong>Supports return-visit value</strong>
+              <p>Authentication becomes the bridge between first discovery and ongoing academic usage.</p>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

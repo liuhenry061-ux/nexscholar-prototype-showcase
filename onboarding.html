@@ -24,6 +24,7 @@
         <a href="./matching.html">Matching</a>
         <a href="./comparison.html">Compare</a>
         <a class="active" href="./onboarding.html">Onboarding</a>
+        <a href="./auth.html">Login</a>
       </nav>
     </header>
 
@@ -121,6 +122,56 @@
         <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
+              <h2>Interactive onboarding states</h2>
+              <p>The best future version should feel like a real workflow. This prototype now simulates the difference between first access and a return visit with unfinished actions.</p>
+            </div>
+          </div>
+          <div class="role-toggle" data-toggle-group data-scope="onboard-state">
+            <button class="active" data-target="first">First-time user</button>
+            <button data-target="return">Return visit</button>
+          </div>
+          <div class="state-board" style="margin-top: 16px;">
+            <article class="glass-card" data-panel="onboard-state" data-value="first">
+              <h3>First-time user state</h3>
+              <div class="signal-row">
+                <span>Primary need</span>
+                <strong>Understand what NexScholar can do without reading too much text</strong>
+              </div>
+              <div class="signal-row">
+                <span>Best guidance</span>
+                <strong>Choose a goal, complete key fields, run one guided example</strong>
+              </div>
+              <div class="signal-row">
+                <span>End state</span>
+                <strong><a class="inline-link" href="./matching.html">Open first recommendation flow</a></strong>
+              </div>
+            </article>
+            <article class="glass-card" data-panel="onboard-state" data-value="return" hidden>
+              <h3>Return-visit state</h3>
+              <div class="signal-row">
+                <span>Primary need</span>
+                <strong>Resume saved progress and continue unfinished academic tasks quickly</strong>
+              </div>
+              <div class="signal-row">
+                <span>Best guidance</span>
+                <strong>Reopen shortlist, update readiness gaps, and review new opportunities</strong>
+              </div>
+              <div class="signal-row">
+                <span>End state</span>
+                <strong><a class="inline-link" href="./auth.html">Return through account dashboard</a></strong>
+              </div>
+            </article>
+
+            <article class="status-card">
+              <h3>Engagement after onboarding</h3>
+              <p>Onboarding should be the start of a relationship, not the end of a tutorial. The platform should remember what the user was doing and surface the most useful next task later.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
               <h2>Support cards around the journey</h2>
               <p>Small support panels reduce uncertainty and tell the user why each step matters.</p>
             </div>
@@ -196,5 +247,6 @@
       </aside>
     </div>
   </div>
+  <script src="./assets/app.js"></script>
 </body>
 </html>

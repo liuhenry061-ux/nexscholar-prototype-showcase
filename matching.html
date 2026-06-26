@@ -24,6 +24,7 @@
         <a class="active" href="./matching.html">Matching</a>
         <a href="./comparison.html">Compare</a>
         <a href="./onboarding.html">Onboarding</a>
+        <a href="./auth.html">Login</a>
       </nav>
     </header>
 
@@ -187,6 +188,70 @@
                 <span class="tag">Prototype testing</span>
               </div>
               <div class="explain">Good domain fit, but readiness is weaker. The lecturer view should recommend requesting a stronger plan before shortlisting.</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Explainable matching states</h2>
+              <p>The future-perfect version should show realistic state transitions, not one frozen recommendation. This interaction simulates how the result changes when profile quality improves.</p>
+            </div>
+          </div>
+          <div class="role-toggle" data-toggle-group data-scope="match-state">
+            <button class="active" data-target="strong">Strong match state</button>
+            <button data-target="weak">Needs refinement</button>
+          </div>
+          <div class="state-board" style="margin-top: 16px;">
+            <article class="glass-card" data-panel="match-state" data-value="strong">
+              <h3>State A: confident recommendation</h3>
+              <div class="signal-row">
+                <span>Fit score</span>
+                <strong>91 because topic, methods, and current lab theme overlap strongly</strong>
+              </div>
+              <div class="signal-row">
+                <span>Trust cue</span>
+                <strong>Known from keywords, methods, prior project tags, and recent profile updates</strong>
+              </div>
+              <div class="signal-row">
+                <span>Next direction</span>
+                <strong><a class="inline-link" href="./comparison.html">Compare top supervisors</a> before first contact</strong>
+              </div>
+            </article>
+            <article class="glass-card" data-panel="match-state" data-value="weak" hidden>
+              <h3>State B: weak confidence and missing data</h3>
+              <div class="signal-row">
+                <span>Fit score</span>
+                <strong>68 because abstract quality is weak and methods are incomplete</strong>
+              </div>
+              <div class="signal-row">
+                <span>Trust cue</span>
+                <strong>System marks part of the score as inferred, not fully confirmed</strong>
+              </div>
+              <div class="signal-row">
+                <span>Next direction</span>
+                <strong><a class="inline-link" href="./onboarding.html">Improve profile fields</a> to unlock stronger matching</strong>
+              </div>
+            </article>
+
+            <article class="status-card">
+              <h3>Next-action intelligence</h3>
+              <p>The matching page should tell the user exactly what to do next based on current readiness instead of showing the same button to everyone.</p>
+              <div class="next-step-grid" style="margin-top: 16px;">
+                <div class="decision-step">
+                  <strong>Save</strong>
+                  <p class="caption">Keep the strongest option for later revisit.</p>
+                </div>
+                <div class="decision-step">
+                  <strong>Compare</strong>
+                  <p class="caption">Validate tradeoffs side by side.</p>
+                </div>
+                <div class="decision-step">
+                  <strong>Improve</strong>
+                  <p class="caption">Fix weak fields before the next scoring cycle.</p>
+                </div>
+              </div>
             </article>
           </div>
         </section>

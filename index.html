@@ -24,6 +24,7 @@
         <a href="./matching.html">Matching</a>
         <a href="./comparison.html">Compare</a>
         <a href="./onboarding.html">Onboarding</a>
+        <a href="./auth.html">Login</a>
       </nav>
     </header>
 
@@ -39,6 +40,7 @@
           <a class="button primary" href="./matching.html">See match flow</a>
           <a class="button secondary" href="./comparison.html">Open compare view</a>
           <a class="button secondary" href="./onboarding.html">Try onboarding</a>
+          <a class="button secondary" href="./auth.html">Sign in / Register</a>
         </div>
         <div class="stats-grid">
           <div class="stat">
@@ -107,6 +109,92 @@
 
     <div class="layout">
       <main class="stack">
+        <section class="panel fade-in delay-2">
+          <div class="section-head">
+            <div>
+              <h2>Unified journey control center</h2>
+              <p>This homepage now works as the integrated product entry. It shows realistic user state, connects discovery to account access, and previews what happens after the first recommendation.</p>
+            </div>
+          </div>
+          <div class="state-board">
+            <article class="state-card">
+              <div class="role-toggle" data-toggle-group data-scope="home-role">
+                <button class="active" data-target="student">Student lifecycle</button>
+                <button data-target="lecturer">Lecturer lifecycle</button>
+              </div>
+              <div class="control-bar" style="margin-top: 16px;">
+                <div class="control-chip">
+                  <strong>Discovery</strong>
+                  <p class="caption">See relevant supervisors, scholarships, or candidate profiles from one goal-first entry point.</p>
+                </div>
+                <div class="control-chip">
+                  <strong>Explanation</strong>
+                  <p class="caption">Every recommendation shows why it appears and what is still uncertain.</p>
+                </div>
+                <div class="control-chip">
+                  <strong>Continuation</strong>
+                  <p class="caption">Each path ends with login, onboarding, or return-use prompts instead of a dead end.</p>
+                </div>
+              </div>
+
+              <div class="glass-card" data-panel="home-role" data-value="student" style="margin-top: 16px;">
+                <h3>Student journey state</h3>
+                <div class="signal-row">
+                  <span>Current goal</span>
+                  <strong>Find a supervisor for health informatics</strong>
+                </div>
+                <div class="signal-row">
+                  <span>Best next action</span>
+                  <strong>Log in and compare top 2 supervisors</strong>
+                </div>
+                <div class="signal-row">
+                  <span>Realistic data state</span>
+                  <strong>74% profile readiness, 2 shortlists, 1 saved scholarship</strong>
+                </div>
+              </div>
+
+              <div class="glass-card" data-panel="home-role" data-value="lecturer" hidden style="margin-top: 16px;">
+                <h3>Lecturer journey state</h3>
+                <div class="signal-row">
+                  <span>Current goal</span>
+                  <strong>Screen strong PhD candidates for bioinformatics</strong>
+                </div>
+                <div class="signal-row">
+                  <span>Best next action</span>
+                  <strong>Sign in and open candidate comparison board</strong>
+                </div>
+                <div class="signal-row">
+                  <span>Realistic data state</span>
+                  <strong>5 new candidates, 2 interview-ready, 1 needs proposal revision</strong>
+                </div>
+              </div>
+            </article>
+
+            <article class="status-card">
+              <h3>Live platform simulation</h3>
+              <p>The perfect prototype should feel closer to the real NexScholar website. This version starts to simulate account state, result state, saved opportunities, and next-step guidance.</p>
+              <div class="decision-strip" style="margin-top: 16px;">
+                <div class="decision-step">
+                  <strong>Visit</strong>
+                  <p class="caption">Arrive from discovery content or search.</p>
+                </div>
+                <div class="decision-step">
+                  <strong>Sign in</strong>
+                  <p class="caption">Continue with role-specific dashboard state.</p>
+                </div>
+                <div class="decision-step">
+                  <strong>Act</strong>
+                  <p class="caption">Compare, save, refine, or message.</p>
+                </div>
+                <div class="decision-step">
+                  <strong>Return</strong>
+                  <p class="caption">Resume pending academic actions later.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="panel fade-in delay-2">
           <div class="section-head">
             <div>
@@ -222,6 +310,28 @@
             </div>
           </div>
         </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Account entry as part of the lifecycle</h2>
+              <p>Because NexScholar is a real platform, authentication should not feel separate from the product story. It should appear exactly when the user wants to save progress, compare deeply, or continue later.</p>
+            </div>
+          </div>
+          <div class="mock-feed">
+            <article class="feed-card">
+              <strong>When to ask for login</strong>
+              <small>After a user finds a promising path: save shortlist, track readiness, or continue a draft application.</small>
+            </article>
+            <article class="feed-card">
+              <strong>What registration should unlock</strong>
+              <small>Role-specific onboarding, saved discoveries, realistic dashboards, and persistent next-action reminders.</small>
+            </article>
+          </div>
+          <div class="actions-row" style="margin-top: 16px;">
+            <a class="button primary" href="./auth.html">Open login and registration flow</a>
+          </div>
+        </section>
       </main>
 
       <aside class="aside-column">
@@ -243,6 +353,10 @@
             <div class="timeline-item">
               <strong>Onboarding</strong>
               <p>Step-by-step guided workflow and first-use prompts.</p>
+            </div>
+            <div class="timeline-item">
+              <strong>Login / Register</strong>
+              <p>Persistent account state that supports revisit value and saved academic actions.</p>
             </div>
           </div>
         </section>
@@ -267,5 +381,6 @@
       This prototype is designed as a high-fidelity concept that now reflects Sprint 1 direction-setting, Sprint 2 refinement, and Sprint 3 integration and continuity improvements.
     </p>
   </div>
+  <script src="./assets/app.js"></script>
 </body>
 </html>

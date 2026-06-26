@@ -505,6 +505,229 @@ h1 {
   line-height: 1.52;
 }
 
+.state-board,
+.control-bar,
+.decision-strip,
+.auth-grid,
+.auth-card-grid,
+.next-step-grid,
+.mock-feed,
+.profile-checklist {
+  display: grid;
+  gap: 14px;
+}
+
+.state-board {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.state-card,
+.glass-card,
+.status-card,
+.auth-shell,
+.form-card {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(24, 34, 46, 0.08);
+  background: linear-gradient(180deg, #ffffff, #faf8f3);
+  box-shadow: 0 12px 30px rgba(18, 58, 99, 0.06);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 248, 243, 0.88));
+}
+
+.status-card {
+  background: linear-gradient(180deg, #123a63, #1b4a77);
+  color: white;
+}
+
+.status-card p,
+.status-card .caption {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.control-bar {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.control-chip {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid rgba(24, 34, 46, 0.08);
+}
+
+.control-chip strong,
+.signal-row strong,
+.auth-option strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.signal-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.signal-row:last-child {
+  border-bottom: 0;
+}
+
+.decision-strip {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.decision-step {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(24, 34, 46, 0.08);
+  background: #fff;
+}
+
+.decision-step strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.inline-link {
+  color: var(--deep);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+.mock-feed {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feed-card {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: #fff;
+  border: 1px solid rgba(24, 34, 46, 0.08);
+}
+
+.feed-card small,
+.form-note,
+.micro-note {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.next-step-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-checklist {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.check-tile {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(24, 34, 46, 0.08);
+  background: #fff;
+}
+
+.check-tile strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 22px;
+}
+
+.auth-shell {
+  padding: 26px;
+}
+
+.auth-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.auth-option {
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(24, 34, 46, 0.08);
+  background: #fff;
+}
+
+.auth-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.form-card {
+  display: grid;
+  gap: 16px;
+}
+
+.form-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field label {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(24, 34, 46, 0.12);
+  background: #fff;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid rgba(30, 123, 114, 0.18);
+  border-color: rgba(30, 123, 114, 0.38);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.auth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--soft-green);
+  color: #185850;
+  font-size: 0.88rem;
+}
+
+.auth-hero-copy h1 {
+  max-width: 12ch;
+}
+
+.auth-hero-copy p {
+  max-width: 56ch;
+}
+
 .stack {
   display: grid;
   gap: 22px;
@@ -750,6 +973,8 @@ h1 {
 @media (max-width: 1120px) {
   .hero,
   .layout,
+  .state-board,
+  .auth-layout,
   .split-layout,
   .onboarding-layout {
     grid-template-columns: 1fr;
@@ -768,7 +993,14 @@ h1 {
   .tiles-3,
   .journey-strip,
   .mini-metrics,
-  .action-flow {
+  .action-flow,
+  .control-bar,
+  .decision-strip,
+  .mock-feed,
+  .next-step-grid,
+  .profile-checklist,
+  .auth-grid,
+  .auth-card-grid {
     grid-template-columns: 1fr;
   }
 

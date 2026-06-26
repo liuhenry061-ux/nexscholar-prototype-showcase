@@ -24,6 +24,7 @@
         <a href="./matching.html">Matching</a>
         <a class="active" href="./comparison.html">Compare</a>
         <a href="./onboarding.html">Onboarding</a>
+        <a href="./auth.html">Login</a>
       </nav>
     </header>
 
@@ -138,6 +139,66 @@
         <section class="panel fade-in delay-3">
           <div class="section-head">
             <div>
+              <h2>Side-by-side decision simulation</h2>
+              <p>This module now starts to model a more realistic platform behaviour: one user can switch between comparison modes and receive a different recommended outcome.</p>
+            </div>
+          </div>
+          <div class="role-toggle" data-toggle-group data-scope="compare-mode">
+            <button class="active" data-target="supervisor">Supervisor mode</button>
+            <button data-target="candidate">Candidate mode</button>
+          </div>
+          <div class="state-board" style="margin-top: 16px;">
+            <article class="glass-card" data-panel="compare-mode" data-value="supervisor">
+              <h3>Supervisor comparison outcome</h3>
+              <div class="signal-row">
+                <span>Best current choice</span>
+                <strong>Nur Aina Rahman due to stronger topic and project overlap</strong>
+              </div>
+              <div class="signal-row">
+                <span>Risk to watch</span>
+                <strong>Student should still validate funding track and first-contact readiness</strong>
+              </div>
+              <div class="signal-row">
+                <span>Next action</span>
+                <strong>Move into contact preparation and save this decision to account state</strong>
+              </div>
+            </article>
+            <article class="glass-card" data-panel="compare-mode" data-value="candidate" hidden>
+              <h3>Candidate comparison outcome</h3>
+              <div class="signal-row">
+                <span>Best current choice</span>
+                <strong>Candidate A because readiness and topic fit are stronger now</strong>
+              </div>
+              <div class="signal-row">
+                <span>Risk to watch</span>
+                <strong>Candidate B could improve after proposal clarification</strong>
+              </div>
+              <div class="signal-row">
+                <span>Next action</span>
+                <strong>Shortlist A, request revision from B, and leave follow-up note for return visit</strong>
+              </div>
+            </article>
+
+            <article class="status-card">
+              <h3>Why this matters</h3>
+              <p>The user should not have to jump across unrelated personal pages. One comparison board should carry the whole decision from evidence to action.</p>
+              <div class="profile-checklist" style="margin-top: 16px;">
+                <div class="check-tile">
+                  <strong>Readable tradeoffs</strong>
+                  <p class="caption">Fit, methods, and readiness remain visible together.</p>
+                </div>
+                <div class="check-tile">
+                  <strong>Decision memory</strong>
+                  <p class="caption">The chosen path can be saved for revisit and dashboard reminders.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
               <h2>Decision to next-step continuity</h2>
               <p>Sprint 3 improves what happens after comparison: users should leave this page knowing exactly what to do next.</p>
             </div>
@@ -194,5 +255,6 @@
       </aside>
     </div>
   </div>
+  <script src="./assets/app.js"></script>
 </body>
 </html>
