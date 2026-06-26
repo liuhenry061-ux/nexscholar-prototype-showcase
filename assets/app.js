@@ -181,9 +181,92 @@ function animateCounters() {
   });
 }
 
+function bindSpotlights() {
+  document.querySelectorAll("[data-spotlight]").forEach((panel) => {
+    panel.addEventListener("mousemove", (event) => {
+      const rect = panel.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      panel.style.setProperty("--spot-x", `${x}%`);
+      panel.style.setProperty("--spot-y", `${y}%`);
+    });
+  });
+}
+
+function bindTiltCards() {
+  const finePointer = window.matchMedia("(pointer:fine)").matches;
+  if (!finePointer) return;
+
+  document.querySelectorAll("[data-tilt]").forEach((card) => {
+    card.addEventListener("mousemove", (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = (event.clientX - rect.left) / rect.width;
+      const y = (event.clientY - rect.top) / rect.height;
+      const rotateY = (x - 0.5) * 8;
+      const rotateX = (0.5 - y) * 8;
+      card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+}
+
+function bindSearchRotation() {
+  const searchInput = document.querySelector("[data-rotating-search]");
+  if (!searchInput) return;
+
+  const samples = [
+    "Bioinformatics supervisor in Malaysia with scholarship support",
+    "Human computer interaction PhD with mixed methods mentor",
+    "Cancer systems modelling lab with funding opportunities",
+    "Medical imaging AI program with conference activity",
+  ];
+
+  let index = 0;
+  window.setInterval(() => {
+    index = (index + 1) % samples.length;
+    searchInput.value = samples[index];
+  }, 2600);
+}
+
+function bindScrollReveal() {
+  const targets = document.querySelectorAll(".reveal-on-scroll");
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.14,
+      rootMargin: "0px 0px -40px 0px",
+    },
+  );
+
+  targets.forEach((target, index) => {
+    target.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
+    observer.observe(target);
+  });
+
+  window.setTimeout(() => {
+    targets.forEach((target) => target.classList.add("is-visible"));
+  }, 1400);
+}
+
 hydrateAuthLinks();
 bindRoleCards();
 bindToggleGroups();
 bindAuthForms();
 hydrateDashboard();
 animateCounters();
+bindSpotlights();
+bindTiltCards();
+bindSearchRotation();
+bindScrollReveal();

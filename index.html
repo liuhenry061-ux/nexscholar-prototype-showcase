@@ -9,8 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
+<body class="home-page">
   <div class="page-shell">
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-a" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-b" aria-hidden="true"></div>
     <header class="topbar fade-in">
       <div class="brand">
         <div class="brand-mark">NS</div>
@@ -29,7 +32,7 @@
     </header>
 
     <section class="product-hero">
-      <div class="search-shell fade-in delay-1">
+      <div class="search-shell fade-in delay-1" data-spotlight>
         <div class="floating-orb orb-a"></div>
         <div class="floating-orb orb-b"></div>
         <div class="eyebrow">Inspired by the original NexScholar platform, enhanced with explainable matching and guided decision support</div>
@@ -39,7 +42,7 @@
         </p>
 
         <div class="search-bar">
-          <input type="text" value="Bioinformatics supervisor in Malaysia with scholarship support" aria-label="Search">
+          <input type="text" value="Bioinformatics supervisor in Malaysia with scholarship support" aria-label="Search" data-rotating-search>
           <select aria-label="Search scope">
             <option>Supervisors and programs</option>
             <option>Grants and scholarships</option>
@@ -49,15 +52,15 @@
         </div>
 
         <div class="hero-metrics">
-          <div class="hero-metric">
+          <div class="hero-metric" data-tilt>
             <strong>Unified user journey</strong>
             <p class="caption">Discovery, explanation, comparison, onboarding, and next actions now work as one continuous flow.</p>
           </div>
-          <div class="hero-metric">
+          <div class="hero-metric" data-tilt>
             <strong>Explainable matching</strong>
             <p class="caption">Recommendations show fit score, overlap reasons, and confidence before the user commits.</p>
           </div>
-          <div class="hero-metric">
+          <div class="hero-metric" data-tilt>
             <strong>Account continuity</strong>
             <p class="caption">Login and registration make saved shortlists, reminders, and return visits feel realistic.</p>
           </div>
@@ -75,7 +78,7 @@
           Live recommendation and opportunity activity
         </div>
 
-        <div class="dashboard-panel">
+        <div class="dashboard-panel" data-tilt>
           <div class="split-top">
             <div>
               <strong>Student dashboard snapshot</strong>
@@ -107,12 +110,12 @@
           </div>
         </div>
 
-        <div class="dashboard-panel">
+        <div class="dashboard-panel" data-tilt>
           <strong>Why this is stronger than the current flow</strong>
           <p class="muted-light" style="margin-top: 8px;">Instead of stopping at content discovery, users can now continue into matching, side-by-side comparison, onboarding, and later revisit through account state.</p>
         </div>
 
-        <div class="dashboard-panel">
+        <div class="dashboard-panel" data-tilt>
           <strong>Live content stream</strong>
           <div class="ticker" style="margin-top: 12px;">
             <div class="ticker-row">
@@ -136,19 +139,19 @@
     </section>
 
     <section class="journey-strip fade-in delay-2">
-      <div class="journey-step active">
+      <div class="journey-step active" data-tilt>
         <strong>1. Discover</strong>
         <p>Browse programs, supervisors, grants, scholarships, and events from one academic entry point.</p>
       </div>
-      <div class="journey-step">
+      <div class="journey-step" data-tilt>
         <strong>2. Understand</strong>
         <p>See why a recommendation fits and what evidence supports the score.</p>
       </div>
-      <div class="journey-step">
+      <div class="journey-step" data-tilt>
         <strong>3. Decide</strong>
         <p>Use side-by-side comparison to choose the strongest path without switching across disconnected pages.</p>
       </div>
-      <div class="journey-step">
+      <div class="journey-step" data-tilt>
         <strong>4. Continue</strong>
         <p>Log in, save progress, improve profile readiness, and return later with clear next actions.</p>
       </div>
@@ -164,7 +167,7 @@
             </div>
           </div>
           <div class="library-grid">
-            <article class="explore-card">
+            <article class="explore-card reveal-on-scroll" data-tilt>
               <span class="library-label">Programs and supervisors</span>
               <h3>Postgraduate paths with clear next steps</h3>
               <p>Users can move from program discovery into explainable supervisor matching instead of manually stitching information together.</p>
@@ -172,7 +175,7 @@
                 <a class="pill" href="./matching.html">Open matching journey</a>
               </div>
             </article>
-            <article class="explore-card">
+            <article class="explore-card reveal-on-scroll" data-tilt>
               <span class="library-label">Scholarships and grants</span>
               <h3>Funding opportunities linked to profile state</h3>
               <p>Scholarships should not sit as isolated listings. They should connect to readiness, eligibility, and saved decision paths.</p>
@@ -181,7 +184,7 @@
                 <span>Deadline in 4 days</span>
               </div>
             </article>
-            <article class="explore-card">
+            <article class="explore-card reveal-on-scroll" data-tilt>
               <span class="library-label">Events and conferences</span>
               <h3>Research activity that supports academic planning</h3>
               <p>Calls for papers and conferences become more valuable when users can save them to their ongoing research path.</p>
@@ -190,7 +193,7 @@
                 <span>Kampar, Malaysia</span>
               </div>
             </article>
-            <article class="explore-card">
+            <article class="explore-card reveal-on-scroll" data-tilt>
               <span class="library-label">Research profile growth</span>
               <h3>Improve quality, not just visibility</h3>
               <p>Readiness signals help users understand which profile updates strengthen matching and future applications.</p>
@@ -209,15 +212,15 @@
             </div>
           </div>
           <div class="signal-grid">
-            <article class="signal-card">
+            <article class="signal-card reveal-on-scroll" data-tilt>
               <h3>Homepage as real hub</h3>
               <p>Acts as a discovery center for academic content and as the start of the matching journey.</p>
             </article>
-            <article class="signal-card">
+            <article class="signal-card reveal-on-scroll" data-tilt>
               <h3>Matching with explanations</h3>
               <p>Fit score, method overlap, and readiness cues help users trust the recommendation.</p>
             </article>
-            <article class="signal-card">
+            <article class="signal-card reveal-on-scroll" data-tilt>
               <h3>Comparison with decisions</h3>
               <p>Users compare meaningful differences side by side and leave with a specific next move.</p>
             </article>
@@ -232,7 +235,7 @@
             </div>
           </div>
           <div class="cards-3">
-            <article class="opportunity-card">
+            <article class="opportunity-card reveal-on-scroll" data-tilt>
               <h3>Supervisor recommendation</h3>
               <p>Assoc. Prof. Dr. Nur Aina Rahman ranks highest because research direction and methods overlap strongly.</p>
               <div class="opportunity-meta">
@@ -241,7 +244,7 @@
                 <span>Python</span>
               </div>
             </article>
-            <article class="opportunity-card">
+            <article class="opportunity-card reveal-on-scroll" data-tilt>
               <h3>Scholarship alignment</h3>
               <p>The system can suggest scholarships that fit the user's target university, field, and readiness state.</p>
               <div class="opportunity-meta">
@@ -250,7 +253,7 @@
                 <span>Saved</span>
               </div>
             </article>
-            <article class="opportunity-card">
+            <article class="opportunity-card reveal-on-scroll" data-tilt>
               <h3>Conference relevance</h3>
               <p>Users can track upcoming conferences related to their research area and return later from the dashboard.</p>
               <div class="opportunity-meta">
@@ -270,15 +273,15 @@
             </div>
           </div>
           <div class="return-grid">
-            <div class="return-box">
+            <div class="return-box reveal-on-scroll" data-tilt>
               <strong>Save shortlist</strong>
               <p class="caption">Keep top supervisors, candidate choices, and opportunity cards in one place.</p>
             </div>
-            <div class="return-box">
+            <div class="return-box reveal-on-scroll" data-tilt>
               <strong>Resume progress</strong>
               <p class="caption">Continue profile completion and pending comparisons from the last visit.</p>
             </div>
-            <div class="return-box">
+            <div class="return-box reveal-on-scroll" data-tilt>
               <strong>Receive next actions</strong>
               <p class="caption">Come back to a dashboard that already knows the most useful next step.</p>
             </div>
@@ -293,23 +296,23 @@
         <section class="aside-card fade-in delay-2">
           <h3 style="font-size: 1.25rem;">Prototype route map</h3>
           <div class="timeline" style="margin-top: 14px;">
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <strong>Home</strong>
               <p>Content discovery and platform framing.</p>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <strong>Matching</strong>
               <p>Explainable recommendation logic.</p>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <strong>Compare</strong>
               <p>Side-by-side decision support.</p>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <strong>Onboarding</strong>
               <p>Guided first-use and return-visit flow.</p>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item reveal-on-scroll">
               <strong>Login</strong>
               <p>Persistent account state and revisit continuity.</p>
             </div>
@@ -319,15 +322,15 @@
         <section class="aside-card fade-in delay-3">
           <h3 style="font-size: 1.25rem;">Sprint 3 improvement focus</h3>
           <div class="feed-list" style="margin-top: 14px;">
-            <div class="feed-item">
+            <div class="feed-item reveal-on-scroll">
               <strong>Closer to original website</strong>
               <p>Homepage now feels more like a research opportunity platform, not only a UI concept board.</p>
             </div>
-            <div class="feed-item">
+            <div class="feed-item reveal-on-scroll">
               <strong>Better product continuity</strong>
               <p>Discovery is now connected to matching, comparison, onboarding, and saved account actions.</p>
             </div>
-            <div class="feed-item">
+            <div class="feed-item reveal-on-scroll">
               <strong>No isolated login page</strong>
               <p>Authentication is presented as part of the academic lifecycle, not a detached admin screen.</p>
             </div>
