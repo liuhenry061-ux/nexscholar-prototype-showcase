@@ -16,7 +16,7 @@
         <div class="brand-mark">NS</div>
         <div class="brand-copy">
           <strong>NexScholar</strong>
-          <span>Account access prototype</span>
+          <span>Secure account access for academic planning and saved progress</span>
         </div>
       </div>
       <nav class="nav">
@@ -28,95 +28,35 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-copy auth-hero-copy fade-in delay-1">
-        <div class="eyebrow">Persistent account state for discovery, comparison, and return-use</div>
-        <h1>Log in when the journey becomes personal.</h1>
+    <section class="product-hero">
+      <div class="signin-shell fade-in delay-1">
+        <div class="eyebrow">Account continuity built into the real user journey</div>
+        <h1>Sign in to keep your academic journey moving.</h1>
         <p>
-          In the ideal NexScholar experience, authentication is not a detached admin screen. It appears exactly when users want to save a shortlist, continue profile setup, revisit a decision, or manage real academic actions over time.
+          On the improved NexScholar prototype, login is where discovery becomes personal. Users can save supervisors, shortlist candidates, track profile readiness, and come back to the exact next step they left unfinished.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="./matching.html">Back to match flow</a>
-          <a class="button secondary" href="./comparison.html">Back to compare flow</a>
-        </div>
-      </div>
-
-      <aside class="hero-panel fade-in delay-2">
-        <div>
-          <h2>Why sign in matters</h2>
-          <p class="muted-light">Saved discoveries, realistic dashboards, and return-visit prompts all depend on account state.</p>
-        </div>
-        <div class="student-card">
-          <div class="auth-badge">Account state unlocked</div>
-          <div class="check-grid" style="margin-top: 16px;">
-            <div class="check"><div><strong>Saved shortlist</strong><div class="caption">Keep top supervisors or candidates across visits.</div></div></div>
-            <div class="check"><div><strong>Progress dashboard</strong><div class="caption">Track profile readiness and pending academic tasks.</div></div></div>
-            <div class="check"><div><strong>Smart reminders</strong><div class="caption">Return to the right next action instead of starting over.</div></div></div>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="journey-strip fade-in delay-2">
-      <div class="journey-step">
-        <strong>Discover</strong>
-        <p>User finds relevant opportunities, supervisors, or candidates.</p>
-      </div>
-      <div class="journey-step">
-        <strong>Understand</strong>
-        <p>Matching logic explains why one path is more suitable.</p>
-      </div>
-      <div class="journey-step">
-        <strong>Decide</strong>
-        <p>Comparison compresses the tradeoff into one decision point.</p>
-      </div>
-      <div class="journey-step active">
-        <strong>Continue</strong>
-        <p>Login and registration preserve the journey for future return use.</p>
-      </div>
-    </section>
-
-    <div class="auth-layout">
-      <section class="auth-shell fade-in delay-2">
-        <div class="section-head">
-          <div>
-            <h2>Role-aware access</h2>
-            <p>The form adapts to whether the user wants to continue as a student researcher or lecturer evaluator.</p>
-          </div>
-        </div>
 
         <div class="role-toggle" data-toggle-group data-scope="auth-mode">
           <button class="active" data-target="login">Login</button>
           <button data-target="register">Register</button>
         </div>
 
-        <div class="auth-grid" style="margin-top: 16px;">
-          <article class="auth-option">
-            <strong>Student account</strong>
-            <p class="caption">Save supervisor comparisons, scholarships, and profile-readiness progress.</p>
-          </article>
-          <article class="auth-option">
-            <strong>Lecturer account</strong>
-            <p class="caption">Track shortlisted candidates, review notes, and screening follow-ups.</p>
-          </article>
-        </div>
-
-        <div class="form-card" data-panel="auth-mode" data-value="login" style="margin-top: 18px;">
-          <h3>Login to continue your NexScholar journey</h3>
+        <div class="signin-panel" data-panel="auth-mode" data-value="login" style="margin-top: 18px;">
+          <h3>Continue to your dashboard</h3>
           <div class="form-stack">
             <div class="field">
-              <label for="login-email">Email</label>
-              <input id="login-email" type="email" placeholder="student@nexscholar.com">
+              <label for="signin-email">Email</label>
+              <input id="signin-email" type="email" placeholder="name@university.edu">
             </div>
             <div class="field">
-              <label for="login-password">Password</label>
-              <input id="login-password" type="password" placeholder="Enter your password">
+              <label for="signin-password">Password</label>
+              <input id="signin-password" type="password" placeholder="Enter your password">
             </div>
             <div class="field">
-              <label for="login-role">Continue as</label>
-              <select id="login-role">
+              <label for="signin-role">Continue as</label>
+              <select id="signin-role">
                 <option>Student researcher</option>
-                <option>Lecturer / supervisor</option>
+                <option>Lecturer or supervisor</option>
               </select>
             </div>
           </div>
@@ -124,11 +64,11 @@
             <button class="button primary" type="button">Open dashboard</button>
             <button class="button secondary" type="button">Forgot password</button>
           </div>
-          <p class="form-note">After login, the user should land on a role-specific dashboard with saved shortlist, readiness progress, and clear next actions.</p>
+          <p class="signin-note">After login, the platform should reopen saved searches, shortlists, profile reminders, and pending academic actions.</p>
         </div>
 
-        <div class="form-card" data-panel="auth-mode" data-value="register" hidden style="margin-top: 18px;">
-          <h3>Create a NexScholar account</h3>
+        <div class="signin-panel" data-panel="auth-mode" data-value="register" hidden style="margin-top: 18px;">
+          <h3>Create a new NexScholar account</h3>
           <div class="form-stack">
             <div class="field">
               <label for="register-name">Full name</label>
@@ -142,7 +82,7 @@
               <label for="register-role">Role</label>
               <select id="register-role">
                 <option>Student researcher</option>
-                <option>Lecturer / supervisor</option>
+                <option>Lecturer or supervisor</option>
               </select>
             </div>
             <div class="field">
@@ -150,51 +90,142 @@
               <select id="register-goal">
                 <option>Find a supervisor</option>
                 <option>Discover scholarships and grants</option>
-                <option>Screen research candidates</option>
+                <option>Screen postgraduate candidates</option>
               </select>
             </div>
           </div>
           <div class="form-actions">
             <button class="button primary" type="button">Create account</button>
-            <button class="button secondary" type="button">Use Google / institutional login</button>
+            <button class="button secondary" type="button">Use institutional login</button>
           </div>
-          <p class="form-note">Registration should immediately feed into role-aware onboarding so the user reaches a useful first action quickly.</p>
+          <p class="signin-note">Registration should connect directly into role-aware onboarding so users reach value quickly after account creation.</p>
         </div>
-      </section>
+      </div>
 
-      <aside class="aside-column">
-        <section class="aside-card fade-in delay-3">
-          <h3 style="font-size: 1.25rem;">What the account should remember</h3>
-          <div class="profile-checklist" style="margin-top: 14px;">
-            <div class="check-tile">
-              <strong>Saved decisions</strong>
-              <p class="caption">Top supervisors, shortlisted candidates, and saved opportunities.</p>
+      <aside class="platform-panel fade-in delay-2">
+        <div>
+          <h2>What login unlocks</h2>
+          <p class="muted-light">A real academic platform should remember progress and make return visits useful.</p>
+        </div>
+
+        <div class="dashboard-panel">
+          <strong>Student account state</strong>
+          <div class="dashboard-rows" style="margin-top: 14px;">
+            <div class="dashboard-row">
+              <span>Saved supervisors</span>
+              <strong>2</strong>
             </div>
-            <div class="check-tile">
-              <strong>Open tasks</strong>
-              <p class="caption">Profile gaps, pending comparison, and next recommended action.</p>
+            <div class="dashboard-row">
+              <span>Saved scholarships</span>
+              <strong>1</strong>
             </div>
-            <div class="check-tile">
-              <strong>Realistic state</strong>
-              <p class="caption">Recent results, updated readiness, and return-visit alerts.</p>
+            <div class="dashboard-row">
+              <span>Recommended next action</span>
+              <strong>Compare shortlist</strong>
             </div>
-            <div class="check-tile">
-              <strong>Lifecycle continuity</strong>
-              <p class="caption">The user resumes from where they left off, not from zero.</p>
+          </div>
+        </div>
+
+        <div class="dashboard-panel">
+          <strong>Lecturer account state</strong>
+          <div class="dashboard-rows" style="margin-top: 14px;">
+            <div class="dashboard-row">
+              <span>New candidates to review</span>
+              <strong>5</strong>
+            </div>
+            <div class="dashboard-row">
+              <span>Shortlisted</span>
+              <strong>2</strong>
+            </div>
+            <div class="dashboard-row">
+              <span>Pending follow-up</span>
+              <strong>1 revision request</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-panel">
+          <strong>Platform value</strong>
+          <p class="muted-light" style="margin-top: 8px;">Authentication now supports saved decisions, realistic data state, return-visit prompts, and a much more believable product flow.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="journey-strip fade-in delay-2">
+      <div class="journey-step">
+        <strong>Discover</strong>
+        <p>Users browse programs, grants, scholarships, and research opportunities.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Understand</strong>
+        <p>Explainable matching clarifies why one academic path fits better.</p>
+      </div>
+      <div class="journey-step">
+        <strong>Decide</strong>
+        <p>Comparison supports a clear decision instead of scattered browsing.</p>
+      </div>
+      <div class="journey-step active">
+        <strong>Continue</strong>
+        <p>Login and registration save the journey for future action and revisit.</p>
+      </div>
+    </section>
+
+    <div class="layout">
+      <main class="stack">
+        <section class="panel fade-in delay-2">
+          <div class="section-head">
+            <div>
+              <h2>Account features that make the platform feel real</h2>
+              <p>This login area supports the product vision by connecting screen-level prototype work with believable ongoing use.</p>
+            </div>
+          </div>
+          <div class="account-grid">
+            <div class="account-box">
+              <strong>Saved shortlists</strong>
+              <p class="caption">Users should keep their top supervisors, candidate reviews, and opportunity cards across visits.</p>
+            </div>
+            <div class="account-box">
+              <strong>Progress tracking</strong>
+              <p class="caption">Profile readiness and missing documents should remain visible after login.</p>
+            </div>
+            <div class="account-box">
+              <strong>Next-step reminders</strong>
+              <p class="caption">The dashboard should continue where the user left off, not return to a blank start.</p>
             </div>
           </div>
         </section>
 
+        <section class="panel fade-in delay-3">
+          <div class="section-head">
+            <div>
+              <h2>Why this is better than a generic sign-in page</h2>
+              <p>The account entry is integrated with the academic workflow, so it feels connected to the rest of the product rather than isolated.</p>
+            </div>
+          </div>
+          <div class="auth-split-grid">
+            <article class="signal-card">
+              <h3>Student continuity</h3>
+              <p>Resume matching, scholarship tracking, saved comparisons, and profile improvement in one place.</p>
+            </article>
+            <article class="signal-card">
+              <h3>Lecturer continuity</h3>
+              <p>Return to candidate screening, shortlist notes, and pending contact actions without losing context.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <aside class="aside-column">
         <section class="aside-card fade-in delay-3">
           <h3 style="font-size: 1.25rem;">Reference alignment</h3>
           <div class="feed-list" style="margin-top: 14px;">
             <div class="feed-item">
-              <strong>Closer to nexscholar.com</strong>
-              <p>Moves the prototype nearer to a real platform structure with account continuity, not just showcase screens.</p>
+              <strong>Closer to the real website</strong>
+              <p>The product now looks more like a content-and-account platform, not a disconnected prototype gallery.</p>
             </div>
             <div class="feed-item">
-              <strong>Supports return-visit value</strong>
-              <p>Authentication becomes the bridge between first discovery and ongoing academic usage.</p>
+              <strong>Supports Sprint 3 goals</strong>
+              <p>Authentication now reinforces unified journey, engagement, and return-use value.</p>
             </div>
           </div>
         </section>
